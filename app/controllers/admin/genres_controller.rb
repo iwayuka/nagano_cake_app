@@ -23,13 +23,21 @@ def edit
 
 end
 
+def update
+  # 編集内容を送信し、データベースに保存・反映するアクションの作成
+  genre = Genre.find(params[:id])
+  genre.update(genre_params)
+  #リダイレクト先は、ジャンル一覧へ
+  redirect_to admin_genres_path
+end
 
 
-  private
-  # ストロングパラメータ
-  def genre_params
-    params.require(:genre).permit(:name)
-  end
+
+private
+# ストロングパラメータ
+def genre_params
+  params.require(:genre).permit(:name)
+end
 
 
 end
