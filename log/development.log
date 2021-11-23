@@ -2712,3 +2712,68 @@ Processing by Admin::GenresController#index as HTML
 Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 60.112.126.23 at 2021-11-23 08:04:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-11-23 08:04:13 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2021-11-23 08:04:20 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:13
+  Rendered admin/genres/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 229ms (Views: 222.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/genres/1/edit" for 60.112.126.23 at 2021-11-23 08:04:24 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:22
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/genres/1" for 60.112.126.23 at 2021-11-23 08:04:27 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/VR0S7tEnO7XWH78UB5aOlK/WweSQoozrmQn67PpF7gDGqpzyiyX6BkgYb3KRvUX74qvGB+Id2re2Chie0DY0w==", "genre"=>{"name"=>"ケーキ(test)"}, "commit"=>"変更の保存", "id"=>"1"}
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:29
+  [1m[36mGenre Update (1.8ms)[0m  [1m[33mUPDATE "genres" SET "name" = ?, "updated_at" = ? WHERE "genres"."id" = ?[0m  [["name", "ケーキ(test)"], ["updated_at", "2021-11-23 08:04:27.203765"], ["id", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:29
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:29
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/admin/genres
+Completed 302 Found in 16ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2021-11-23 08:04:27 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:13
+  Rendered admin/genres/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
