@@ -17,6 +17,14 @@ def create
   redirect_to '/admin/genres'
 end
 
+def edit
+  # findメソッドを用いて、データの取得
+  @genre = Genre.find(params[:id])
+
+end
+
+
+
   private
   # ストロングパラメータ
   def genre_params

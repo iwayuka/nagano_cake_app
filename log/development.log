@@ -2302,3 +2302,50 @@ Processing by Admin::GenresController#index as HTML
 Completed 200 OK in 58ms (Views: 51.2ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 60.112.126.23 at 2021-11-23 07:25:46 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-11-23 07:25:46 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-11-23 07:25:47 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2021-11-23 07:25:56 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:13
+  Rendered admin/genres/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 301ms (Views: 292.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/genres/1/edit" for 60.112.126.23 at 2021-11-23 07:26:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:22
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
