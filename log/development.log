@@ -5846,3 +5846,476 @@ Processing by Admin::ItemsController#index as HTML
 Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 60.112.126.23 at 2021-11-29 10:16:28 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 17ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 10:16:32 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:11
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  Rendered admin/items/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 345ms (Views: 337.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/items/new" for 60.112.126.23 at 2021-11-29 10:16:36 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/new.html.erb:11
+  Rendered admin/items/new.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 104ms (Views: 103.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/items/1" for 60.112.126.23 at 2021-11-29 10:16:37 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  Rendered admin/items/show.html.erb within layouts/application (270.3ms)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item' for #<#<Class:0x000000000575bd18>:0x00007f36d8037148>
+Did you mean?  @item):
+    2: <table>
+    3:   <tr>
+    4:     <th>商品名</th>
+    5:     <td><%= item.name %></td>
+    6:   </tr>
+    7:   <tr>
+    8:     <th>商品説明</th>
+  
+app/views/admin/items/show.html.erb:5:in `_app_views_admin_items_show_html_erb___2363688851519656071_69936764533960'
+Started GET "/admin/items/1" for 60.112.126.23 at 2021-11-29 10:17:54 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/items/2" for 60.112.126.23 at 2021-11-29 10:18:31 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/items/3" for 60.112.126.23 at 2021-11-29 10:22:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.9ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:22:10 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+Completed 404 Not Found in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=4):
+  
+app/controllers/admin/items_controller.rb:22:in `show'
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 10:22:19 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:11
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  Rendered admin/items/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/items/new" for 60.112.126.23 at 2021-11-29 10:22:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/new.html.erb:11
+  Rendered admin/items/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/admin/items" for 60.112.126.23 at 2021-11-29 10:22:57 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PhkadlYyMx0UYgNDPaZGjBrmH+5J0rAlDVXYHgIfGSEsJqno5fhXPxSW4q2ZMSimLorgnYF7kPq+CpJQMGFRUg==", "item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f36d8628b60 @tempfile=#<Tempfile:/tmp/RackMultipart20211129-9225-1ygjok8.jpg>, @original_filename="sunset.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"item[image]\"; filename=\"sunset.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"テストケーキ", "introduction"=>"テストケーキの説明文", "genre_id"=>"2", "price"=>"2000", "is_active"=>"1"}, "commit"=>"新規登録"}
+Unpermitted parameter: :image
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/items_controller.rb:11
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:11
+  [1m[36mItem Create (1.9ms)[0m  [1m[32mINSERT INTO "items" ("genre_id", "name", "introduction", "price", "is_active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["genre_id", 2], ["name", "テストケーキ"], ["introduction", "テストケーキの説明文"], ["price", 2000], ["is_active", 1], ["created_at", "2021-11-29 10:22:57.657088"], ["updated_at", "2021-11-29 10:22:57.657088"]]
+  ↳ app/controllers/admin/items_controller.rb:11
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/items_controller.rb:11
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/admin/items
+Completed 302 Found in 16ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 10:22:57 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:11
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  Rendered admin/items/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:23:19 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:24:23 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  Rendered admin/items/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/admin/items/show.html.erb:18: syntax error, unexpected '(', expecting ')'
+...fer.append=( @item.price * 1.1(:delimited) );@output_buffer....
+...                              ^
+/home/ec2-user/environment/nagano_cake/app/views/admin/items/show.html.erb:18: syntax error, unexpected ')', expecting end
+...@item.price * 1.1(:delimited) );@output_buffer.safe_append='...
+...                              ^):
+  
+app/views/admin/items/show.html.erb:18: syntax error, unexpected '(', expecting ')'
+app/views/admin/items/show.html.erb:18: syntax error, unexpected ')', expecting end
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:33:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `price' for #<Class:0x00007f36d858b590>):
+  
+app/controllers/admin/items_controller.rb:23:in `show'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:33:52 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:23
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `*' for #<Item:0x00007f36d9cd9e18>):
+  
+app/controllers/admin/items_controller.rb:23:in `show'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:34:22 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `price' for #<Admin::ItemsController:0x00007f36d8122328>):
+  
+app/controllers/admin/items_controller.rb:23:in `show'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:35:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/admin/items_controller.rb:24: syntax error, unexpected end, expecting ')'
+  end
+  ^~~
+/home/ec2-user/environment/nagano_cake/app/controllers/admin/items_controller.rb:38: syntax error, unexpected end, expecting ')'):
+  
+app/controllers/admin/items_controller.rb:24: syntax error, unexpected end, expecting ')'
+app/controllers/admin/items_controller.rb:38: syntax error, unexpected end, expecting ')'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:41:42 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.1ms)
+
+
+  
+NameError (undefined local variable or method `add_tax_item_price' for #<Class:0x00007f36d0430e78>):
+  
+app/models/item.rb:8:in `<class:Item>'
+app/models/item.rb:1:in `<main>'
+app/controllers/admin/items_controller.rb:22:in `show'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:44:35 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `add_tax_item_price' for #<Class:0x00007f36d9658d00>):
+  
+app/models/item.rb:8:in `<class:Item>'
+app/models/item.rb:1:in `<main>'
+app/controllers/admin/items_controller.rb:22:in `show'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:44:49 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `add_tax_item_price' for #<Class:0x00007f36d03bd310>):
+  
+app/models/item.rb:8:in `<class:Item>'
+app/models/item.rb:1:in `<main>'
+app/controllers/admin/items_controller.rb:22:in `show'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 10:45:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 75ms (Views: 46.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 10:45:17 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:11
+  Rendered admin/items/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    17:         <%= item.name %>
+    18:       </td>
+    19:       <td>
+    20:         <%= item.price(:delimited) %>
+    21:       </td>
+    22:       <td>
+    23:         <%= item.genre.name %>
+  
+app/views/admin/items/index.html.erb:20:in `block in _app_views_admin_items_index_html_erb__3732845577111677604_69936775481740'
+app/views/admin/items/index.html.erb:11:in `_app_views_admin_items_index_html_erb__3732845577111677604_69936775481740'
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 10:45:35 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:11
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  Rendered admin/items/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 10:49:33 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (undefined local variable or method `add_tax_price' for #<Class:0x00007f36d8181cd8>):
+  
+app/models/item.rb:8:in `<class:Item>'
+app/models/item.rb:1:in `<main>'
+app/controllers/admin/items_controller.rb:18:in `index'
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 10:56:30 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `tax_price' for #<Class:0x00007f36da4e7718>):
+  
+app/models/item.rb:8:in `<class:Item>'
+app/models/item.rb:1:in `<main>'
+app/controllers/admin/items_controller.rb:18:in `index'
+Started GET "/" for 60.112.126.23 at 2021-11-29 22:19:49 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (5.9ms)
+Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-11-29 22:19:51 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 22:19:57 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `tax_price' for #<Class:0x000000000492e268>):
+  
+app/models/item.rb:8:in `<class:Item>'
+app/models/item.rb:1:in `<main>'
+app/controllers/admin/items_controller.rb:18:in `index'
+Started GET "/admin/items" for 60.112.126.23 at 2021-11-29 22:20:14 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:11
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:23
+  Rendered admin/items/index.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 332ms (Views: 321.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 22:20:22 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `tax_price' for #<Item:0x00007efd3817bee8>):
+    15:   <tr>
+    16:     <th>税込価格<br />
+    17:         (税抜価格)</th>
+    18:     <td><%= @item.tax_price.to_s(:delimited) %>(<%= @item.price.to_s(:delimited) %>)円</td>
+    19:   </tr>
+    20:   <tr>
+    21:     <th>販売ステータス</th>
+  
+app/views/admin/items/show.html.erb:18:in `_app_views_admin_items_show_html_erb___3438627137783040447_69813016450820'
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 22:20:49 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/items/4" for 60.112.126.23 at 2021-11-29 22:33:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 279ms (Views: 259.8ms | ActiveRecord: 1.3ms)
+
+
