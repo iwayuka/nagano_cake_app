@@ -7585,3 +7585,18 @@ Processing by Admin::CustomersController#index as HTML
 Completed 200 OK in 458ms (Views: 456.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/admin/customers/1" for 60.112.126.23 at 2021-11-30 01:21:29 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/customers_controller.rb:8
+Completed 404 Not Found in 16ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Customer with 'id'=1):
+  
+app/controllers/admin/customers_controller.rb:8:in `show'
