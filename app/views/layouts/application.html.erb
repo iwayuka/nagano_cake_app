@@ -10,6 +10,26 @@
   </head>
 
   <body>
+    <header>
+      <!-- 店舗ロゴを後ほど記述、表示 -->
+      <h1>logo</h1>
+
+    <% if admin_signed_in? %>
+      <li>
+        <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
+      </li>
+    <% else %>
+      <li>About</li>
+      <li>商品一覧</li>
+      <li>新規登録</li>
+      <li>
+        <%= link_to "ログイン", new_admin_registration_path %>
+      </li>
+      <p>Search</p><!-- 検索フィールドの記述 -->
+    <% end %>
+    </header>
+
+
     <%= yield %>
   </body>
 </html>
