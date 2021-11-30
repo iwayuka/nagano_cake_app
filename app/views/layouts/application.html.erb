@@ -19,29 +19,29 @@
             <!-- 店舗ロゴを後ほど記述、表示 -->
             <h1>LOGO</h1>
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
               <!-- 管理者がログインしている時と、ログインしてない時で、ヘッダーの表示を変える -->
               <% if admin_signed_in? %>
 
               <!-- 管理者がログインしている状態では下記内容がヘッダーに出力 -->
               <li class="nav-item">
-                <%= link_to "商品一覧", admin_items_path, class:"nav-link active link-dark" %>
+                <%= link_to "商品一覧", admin_items_path, class:"py-2 px-3 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "会員一覧", admin_customers_path, class:"nav-link active" %>
+                <%= link_to "会員一覧", admin_customers_path, class:"py-2 px-3 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "注文履歴一覧", admin_root_path, class:"nav-link active" %>
+                <%= link_to "注文履歴一覧", admin_root_path, class:"py-2 px-0 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "ジャンル一覧", admin_genres_path, class:"nav-link active" %>
+                <%= link_to "ジャンル一覧", admin_genres_path, class:"py-2 px-0 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"nav-link active " %>
+                <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <!-- 以上 -->
               <% else %>
@@ -61,11 +61,6 @@
             </ul>
             <% end %>
             <!-- 以上 -->
-
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
