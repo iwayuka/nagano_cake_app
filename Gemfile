@@ -70,3 +70,6 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 # 画像リサイズ機能gem
 gem "refile-mini_magick"
 
+# レイアウトを整えるBootstrapのgem
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
