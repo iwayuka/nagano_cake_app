@@ -1,0 +1,27 @@
+<!-- テーブルにてレイアウト調整が必要 -->
+<h4>会員一覧</h4>
+  <table>
+    <tr>
+      <th>会員ID</th>
+      <th>氏名</th>
+      <th>メールアドレス</th>
+      <th>ステータス</th>
+    </tr>
+    <% @customers.each do |customer| %>
+    <tr>
+      <td>
+        <%= customer.id %>
+      </td>
+      <td><!-- 氏名に会員詳細画面へのリンクを記述 -->
+        <%= customer.last_name %><%= customer.first_name %>
+      </td>
+      <td>
+        <%= customer.email %>
+      </td>
+      <td>
+        <%= customer.is_deleted ? '有効':'退会' %>
+      </td>
+
+    </tr>
+    <% end %>
+  </table>
