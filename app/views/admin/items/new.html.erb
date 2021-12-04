@@ -1,20 +1,66 @@
-<h1>商品新規登録</h1>
-<%= form_with model:@item, url:'/admin/items', local:true do |f| %>
-  <h4>商品画像</h4>
-  <%= f.attachment_field :image %>
-  <h4>商品名</h4>
-  <%= f.text_field :name, placeholder: "商品名" %>
-  <h4>商品説明</h4>
-  <%= f.text_area :introduction, placeholder: "ここに説明文を記述します" %>
-  <h4>ジャンル</h4>
-  <!--Genresのデータベースからカラムを引っ張って、プルダウンを実装するためのコード -->
-  <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "-- 選択して下さい --" %>
-  <h4>税抜価格</h4>
-  <%= f.text_field :price, placeholder: "1000" %><p>円</p>
-  <h4>販売ステータス</h4>
-  <%= f.label :is_active, '販売中', value: 1 %>
-  <%= f.radio_button :is_active, '1' %>
-  <%= f.label :is_active, '販売停止中', value: 0 %>
-  <%= f.radio_button :is_active, '0' %>
-  <%= f.submit '新規登録' %>
-<% end %>
+<div class="container">
+  <div class="mb-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 my-3 bg-secondary text-white">商品新規登録</h4>
+    </div>
+  </div>
+    <%= form_with model:@item, url:'/admin/items', local:true do |f| %>
+  <div class="mb-3 row d-flex justify-content-center">
+    <div class="col-lg-2">
+      <p>商品画像</p>
+    </div>
+    <div class="col-lg-4">
+      <%= f.attachment_field :image %>
+    </div>
+  </div>
+  <div class="mb-3 row d-flex justify-content-center">
+    <div class="col-lg-2">
+      <p>商品名</p>
+    </div>
+      <div class="col-lg-4">
+        <%= f.text_field :name, placeholder: "商品名", class:"form-control" %>
+      </div>
+    </div>
+    <div class="mb-3 row d-flex justify-content-center">
+      <div class="col-lg-2">
+        <p>商品説明</p>
+      </div>
+      <div class="col-lg-4">
+        <%= f.text_area :introduction, placeholder: "ここに説明文を記述します", class:"form-control" %>
+      </div>
+    </div>
+    <div class="mb-3 row d-flex justify-content-center">
+      <div class="col-lg-2">
+        <p>ジャンル</p>
+      </div>
+        <!--Genresのデータベースからカラムを引っ張って、プルダウンを実装するためのコード -->
+      <div class="col-lg-4">
+        <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "-- 選択して下さい --", class:"custom-select" %>
+      </div>
+    </div>
+    <div class="mb-3 row d-flex justify-content-center">
+      <div class="col-lg-2">
+        <p>税抜価格</p>
+      </div>
+      <div class="col-lg-4">
+        <%= f.text_field :price, placeholder: "1000", class:"form-control" %>円
+      </div>
+    </div>
+    <div class="mb-3 row d-flex justify-content-center">
+      <div class="col-lg-2">
+        <p>販売ステータス</p>
+      </div>
+      <div class="col-lg-4">
+        <%= f.radio_button :is_active, '1' %>
+        <%= f.label :is_active, '販売中', value: 1 %>
+        <%= f.radio_button :is_active, '0' %>
+        <%= f.label :is_active, '販売停止中', value: 0 %>
+      </div>
+    </div>
+  <div class="mb-3 row d-flex justify-content-center">
+    <div class="col-lg-3">
+      <%= f.submit '新規登録', class: "px-5 py-7 btn btn-success"  %>
+    </div>
+  </div>
+  <% end %>
+</div>
