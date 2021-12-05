@@ -4743,3 +4743,279 @@ Processing by Admin::ItemsController#edit as HTML
 Completed 200 OK in 162ms (Views: 158.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:27:47 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4148ms (Views: 4137.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:27:53 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 138ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:41:36 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 367ms (Views: 361.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:46:00 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3614ms (Views: 3608.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/nagano_cake/app/assets/images/image/christmas-g00bb1ee29_1280.jpg" for 60.112.126.23 at 2021-12-05 08:46:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/nagano_cake/app/assets/images/image/christmas-g00bb1ee29_1280.jpg"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:49:13 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2473ms (Views: 2471.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:49:34 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2082ms (Views: 2080.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:49:52 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2052ms (Views: 2051.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:53:20 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2009ms (Views: 2004.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:57:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2073ms (Views: 2072.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:57:52 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2071ms (Views: 2070.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 08:59:20 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2035ms (Views: 2033.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:01:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2046ms (Views: 2045.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:02:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2166ms (Views: 2164.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:02:33 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2032ms (Views: 2031.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:03:03 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2000ms (Views: 1998.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:03:44 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2064ms (Views: 2063.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:04:02 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2011ms (Views: 2010.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:09:03 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/homes/top.html.erb:21: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/homes/top.html.erb:21: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:09:38 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 3545ms (Views: 3542.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:13:38 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `price' for nil:NilClass):
+    16: <% @items.each do |item| %>
+    17: <%= attachment_image_tag item, :image %>
+    18: <%= item.name %>
+    19: <span>¥</span><%= @item.price.to_s(:delimited) %>
+    20: <% end %>
+  
+app/views/homes/top.html.erb:19:in `block in _app_views_homes_top_html_erb__1010540533702423443_34568720'
+app/views/homes/top.html.erb:16:in `_app_views_homes_top_html_erb__1010540533702423443_34568720'
+Started GET "/" for 60.112.126.23 at 2021-12-05 09:14:20 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 437ms (Views: 435.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 20:04:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/homes_controller.rb:11: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/homes_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2021-12-05 20:04:30 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 553ms (Views: 547.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-05 20:04:33 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 140ms (Views: 139.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for 60.112.126.23 at 2021-12-05 20:04:47 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 86ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 60.112.126.23 at 2021-12-05 20:05:48 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 414ms (Views: 409.0ms | ActiveRecord: 0.0ms)
+
+
