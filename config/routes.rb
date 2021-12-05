@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   registrations: 'admins/registrations'
 }
 
+root :to => 'homes#top'
+
 namespace :admin do
     resources :genres, only: [:index, :create, :edit, :update]
     resources :items
@@ -19,5 +21,5 @@ namespace :admin do
     root :to => 'homes#top'
     resources :order, only: [:show]
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

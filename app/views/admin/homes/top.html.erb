@@ -1,27 +1,37 @@
-<!-- テーブルにてレイアウト調整が必要 -->
-<h4>注文履歴覧</h4>
-  <table>
-    <tr>
-      <th>購入日時</th>
-      <th>購入者</th>
-      <th>注文個数</th>
-      <th>注文ステータス</th>
-    </tr>
-    <% @orders.each do |order| %>
-    <tr>
-      <td><!-- 注文詳細画面へ遷移 -->
-        <%= order.created_at %>
-      </td>
-      <td>
-        <%= order.last_name %><%- order.first_name %>
-      </td>
-      <td>
-        <!-- 注文個数を足して、出力 -->
-      </td>
-      <td>
-        <%= order.status %>
-      </td>
+<div class="container">
+  <div class="mb-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 my-3 bg-secondary text-white">注文履歴覧</h4>
+    </div>
+  </div>
 
-    </tr>
-    <% end %>
-  </table>
+    <!-- 注文履歴一覧をテーブル を使用して表示 -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-10">
+      <table class="table">
+        <tr class="table-light">
+          <th scope="col" style="width: 30%">購入日時</th>
+          <th scope="col" style="width: 20%">購入者</th>
+          <th scope="col" style="width: 20%">注文個数</th>
+          <th scope="col" style="width: 30%">注文ステータス</th>
+        </tr>
+        <% @orders.each do |order| %>
+        <tr>
+          <td><!-- 注文詳細画面へ遷移 -->
+            <%= link_to order.created_at, admin_order_path(order.id), class:"link-dark" %>
+          </td>
+          <td>
+            <%= order.last_name %><%- order.first_name %>
+          </td>
+          <td>
+            <!-- 注文個数を足して、出力 -->
+          </td>
+          <td>
+            <%= order.status %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
