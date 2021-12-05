@@ -1,25 +1,48 @@
-<%= attachment_image_tag @item, :image %>
-<table>
-  <tr>
-    <th>商品名</th>
-    <td><%= @item.name %></td>
-  </tr>
-  <tr>
-    <th>商品説明</th>
-    <td><%= @item.introduction %></td>
-  </tr>
-  <tr>
-    <th>ジャンル</th>
-    <td><%= @item.genre.name %></td>
-  </tr>
-  <tr>
-    <th>税込価格<br />
-        (税抜価格)</th>
-    <td>(<%= @item.price.to_s(:delimited) %>)円</td>
-  </tr>
-  <tr>
-    <th>販売ステータス</th>
-    <td><%= @item.is_active ? '販売中':'販売停止中' %></td>
-  </tr>
+<div class="container">
+  <div class="mb-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 my-3 bg-secondary text-white">商品詳細</h4>
+    </div>
+  </div>
 
-</table>
+  <div class="mb-3 row">
+    <div class="col-lg-4">
+      <%= attachment_image_tag @item, :image %>
+    </div>
+    <div class="col-lg-6">
+      <table class="table table-borderless">
+        <tr>
+          <td scope="col" style="width: 30%">商品名</td>
+          <td><%= @item.name %></td>
+        </tr>
+        <tr>
+          <td scope="col" style="width: 30%">商品説明</td>
+          <td><%= @item.introduction %></td>
+        </tr>
+        <tr>
+          <td scope="col" style="width: 30%">ジャンル</td>
+          <td><%= @item.genre.name %></td>
+        </tr>
+        <tr>
+          <td scope="col" style="width: 30%">税込価格<br />
+                                             (税抜価格)
+          </td>
+          <td>(<%= @item.price.to_s(:delimited) %>)円</td>
+        </tr>
+        <tr>
+          <td scope="col" style="width: 30%">販売ステータス</td>
+          <td><%= @item.is_active ? '販売中':'販売停止中' %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="mb-3 row d-flex justify-content-center">
+    <div class="col-lg-3">
+      <%= link_to "編集する", edit_admin_item_path(@item.id), class:"px-5 py-7 btn btn-success" %>
+    </div>
+  </div>
+</div>
+
+
+
+

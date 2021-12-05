@@ -4,6 +4,8 @@
       <h4 class="px-3 my-3 bg-secondary text-white">商品一覧</h4>
     </div>
   </div>
+
+  <!-- 商品一覧をテーブル を使用して表示 -->
   <div class="row">
     <div class="col-lg-12 d-flex justify-content-center">
       <table class="table">
@@ -20,7 +22,7 @@
             <%= item.id %>
           </td>
           <td>
-            <%= item.name %>
+            <%= link_to item.name, admin_item_path(item.id), class:"link-dark" %>
           </td>
           <td>
             <%= item.price.to_s(:delimited) %>
@@ -36,6 +38,7 @@
       </table>
     </div>
   </div>
+  <!--以上 -->
 </div>
 
 
