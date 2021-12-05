@@ -1,27 +1,37 @@
-<!-- テーブルにてレイアウト調整が必要 -->
-<h4>会員一覧</h4>
-  <table>
-    <tr>
-      <th>会員ID</th>
-      <th>氏名</th>
-      <th>メールアドレス</th>
-      <th>ステータス</th>
-    </tr>
-    <% @customers.each do |customer| %>
-    <tr>
-      <td>
-        <%= customer.id %>
-      </td>
-      <td><!-- 氏名に会員詳細画面へのリンクを記述 -->
-        <%= customer.last_name %><%= customer.first_name %>
-      </td>
-      <td>
-        <%= customer.email %>
-      </td>
-      <td>
-        <%= customer.is_deleted ? '有効':'退会' %>
-      </td>
+<div class="container">
+  <div class="mb-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 my-3 bg-secondary text-white">会員一覧</h4>
+    </div>
+  </div>
 
-    </tr>
-    <% end %>
-  </table>
+    <!-- 商品一覧をテーブル を使用して表示 -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-8">
+      <table class="table">
+        <tr class="table-light">
+          <th scope="col" style="width: 12%">会員ID</th>
+          <th scope="col" style="width: 35%">氏名</th>
+          <th scope="col" style="width: 35%">メールアドレス</th>
+          <th scope="col" style="width: 18%">ステータス</th>
+        </tr>
+        <% @customers.each do |customer| %>
+        <tr>
+          <td>
+            <%= customer.id %>
+          </td>
+          <td><!-- 氏名に会員詳細画面へのリンクを記述 -->
+            <%= link_to customer.last_name customer.first_name, admin_item_path(item.id), class:"link-dark" %>
+          </td>
+          <td>
+            <%= customer.email %>
+          </td>
+          <td>
+            <%= customer.is_deleted ? '有効':'退会' %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
