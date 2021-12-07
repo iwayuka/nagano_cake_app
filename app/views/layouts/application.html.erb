@@ -44,6 +44,21 @@
                 <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <!-- 以上 -->
+              <!-- 会員がログインしている状態では下記内容をヘッダーに出力 -->
+              <% elsif customer_signed_in? %>
+              <li class="nav-item">
+                <%= link_to "マイページ", root_path, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "商品一覧", root_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "カート", admin_root_path, class:"py-2 px-4 m-3 btn btn-outline-dark nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
+              </li>
+
               <% else %>
               <!-- 管理者がログインしていない状態では下記内容をヘッダーに出力 -->
               <li class="nav-item">
@@ -56,7 +71,7 @@
                 <%= link_to "新規登録", new_customer_registration_path, class:"py-2 px-2  m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li>
-                <%= link_to "ログイン", new_admin_registration_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
+                <%= link_to "ログイン", new_customer_session_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
               </li>
             </ul>
             <% end %>

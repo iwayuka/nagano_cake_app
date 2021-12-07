@@ -21,7 +21,7 @@
             <%= customer.id %>
           </td>
           <td><!-- 氏名に会員詳細画面へのリンクを記述 -->
-            <%= link_to customer.last_name customer.first_name, admin_item_path(item.id), class:"link-dark" %>
+            <%= link_to customer.last_name, admin_customer_path(customer.id), class:"link-dark" %>
           </td>
           <td>
             <%= customer.email %>
