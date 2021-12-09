@@ -7193,3 +7193,137 @@ Processing by Customers::SessionsController#new as HTML
 Completed 200 OK in 128ms (Views: 126.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/customers/sign_in" for 60.112.126.23 at 2021-12-09 11:20:36 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 464ms (Views: 443.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-09 11:25:40 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 440ms (Views: 430.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers/sign_in" for 60.112.126.23 at 2021-12-09 11:25:43 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 149ms (Views: 106.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/customers/sign_in" for 60.112.126.23 at 2021-12-09 11:25:50 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sVxXqS6BrDJWERp5sJIA1d+6hN49E8loHQjGxSVEzezROyro7nsugBUPC0Mm3ghq7hycOQGfCQsivhEMET0tTw==", "customer"=>{"email"=>"1111@gamil.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "1111@gamil.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 325ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-09 11:25:51 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.7ms)
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 149ms (Views: 146.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-09 11:26:03 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#mypage as HTML
+  Rendering customers/mypage.html.erb within layouts/application
+  Rendered customers/mypage.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 118ms (Views: 115.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-09 11:29:39 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CustomersController#mypage as HTML
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current' for #<CustomersController:0x0000000004247a80>
+Did you mean?  current_admin):
+  
+app/controllers/customers_controller.rb:4:in `mypage'
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-09 11:31:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#mypage as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+Completed 404 Not Found in 29ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Customer without an ID):
+  
+app/controllers/customers_controller.rb:4:in `mypage'
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-09 11:34:13 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#mypage as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Customer without an ID):
+  
+app/controllers/customers_controller.rb:4:in `mypage'
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-09 11:36:35 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#mypage as HTML
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<CustomersController:0x00007fd5ec4d0e58>
+Did you mean?  current_customer):
+  
+app/controllers/customers_controller.rb:4:in `mypage'
+Started GET "/" for 60.112.126.23 at 2021-12-09 11:39:44 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (12.6ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 542ms (Views: 535.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-09 11:39:50 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#mypage as HTML
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+  Rendering customers/mypage.html.erb within layouts/application
+  Rendered customers/mypage.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 131ms (Views: 125.0ms | ActiveRecord: 1.4ms)
+
+

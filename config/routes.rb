@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
 root :to => 'homes#top'
 get 'about' => 'homes#about'
+get 'customers/mypage' => 'customers#mypage'
 
 namespace :admin do
     resources :genres, only: [:index, :create, :edit, :update]
