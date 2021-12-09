@@ -1,3 +1,66 @@
-tamesi
+<h4>マイページ</h4>
+<span>
+  <strong>登録情報</strong>
+</span>
+<a href="">編集する</a>
+  <table class="table">
+    <tr>
+      <td>
+        <p>氏名</p>
+      </td>
+      <td>
+        <%= @customer.last_name %> <%= @customer.first_name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>カナ</p>
+      </td>
+      <td>
+        <%= @customer.last_name_kana %> <%= @customer.first_name_kana %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>郵便番号</p>
+      </td>
+      <td>
+        <%= @customer.postal_code %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>住所<p>
+      </td>
+      <td>
+        <%= @customer.address %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>電話番号<p>
+      </td>
+      <td>
+         <%= @customer.telephone_number %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>メールアドレス<p>
+      </td>
+      <td>
+        <%= @customer.email %>
+      </td>
+    </tr>
+  </table>
 
-<%= @customer.last_name %>s
+<span>
+  <strong>配送先</strong>
+</span>
+<a href="">一覧を見る</a>
+
+<span>
+  <strong>注文履歴</strong>
+</span>
+<a href="">一覧を見る</a>
+
