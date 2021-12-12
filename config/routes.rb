@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 root :to => 'homes#top'
 get 'about' => 'homes#about'
 get 'customers/mypage' => 'customers#mypage'
+get 'customers/mypage/edit/:id' => 'customers#edit', as: 'edit_customers_mypage'
+patch 'customers/mypage' => 'customers#update', as: 'update_customers_mypage'
+
 
 namespace :admin do
     resources :genres, only: [:index, :create, :edit, :update]

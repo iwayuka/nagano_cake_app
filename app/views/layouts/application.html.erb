@@ -47,7 +47,7 @@
               <!-- 会員がログインしている状態では下記内容をヘッダーに出力 -->
               <% elsif customer_signed_in? %>
               <li class="nav-item">
-                <%= link_to "マイページ", root_path, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
+                <%= link_to "マイページ", customers_mypage_path, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
                 <%= link_to "商品一覧", root_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
