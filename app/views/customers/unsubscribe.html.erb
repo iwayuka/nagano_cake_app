@@ -1,0 +1,6 @@
+<h3><strong>本当に退会しますか？</strong></h3>
+<p>退会すると、会員登録情報や</p>
+<p>これまでの購入履歴が閲覧できなくなります。</p>
+<p>退会する場合は、「退会する」をクリックしてください</p>
+<%= link_to "退会する", withdrawal_path, method: :patch, data: { confilm: "本当に退会しますか？" } %>
+<%= link_to "退会しない", customers_mypage_path %>

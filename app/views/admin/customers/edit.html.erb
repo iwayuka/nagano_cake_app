@@ -67,10 +67,10 @@
       <%= f.label :会員ステータス %>
     </div>
     <div class="col-lg-4">
-      <%= f.radio_button :is_deleted, '1' %>
-      <%= f.label :is_deleted, '有効', value: 1 %>fit
-      <%= f.radio_button :is_deleted, '0' %>
-      <%= f.label :is_deleted, '退会', value: 0 %>
+      <%= f.radio_button :is_deleted, 'false' %>
+      <%= f.label :is_deleted, '有効', value: false %>
+      <%= f.radio_button :is_deleted, 'true' %>
+      <%= f.label :is_deleted, '退会', value: true %>
       <%= f.submit '変更を保存' %>
     </div>
   </div>

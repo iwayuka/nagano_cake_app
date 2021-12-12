@@ -17,7 +17,20 @@ class CustomersController < ApplicationController
   customer.update(customer_params)
   #リダイレクト先は、ジャンル一覧へ
   redirect_to customers_mypage_path
-end
+  end
+
+  def unsubscribe
+  end
+
+  def withdrawal
+    @customer = Customer.find(current_customer.id)
+    # is_deletedカラムをtrueに変更することにより削除フラグを立てる
+    @customer.update(is_deleted: true)
+    reset_session
+    flash[:notice] = "退会処理を実行いたしました"
+    redirect_to root_path
+  end
+
 
 private
 # ストロングパラメータ
