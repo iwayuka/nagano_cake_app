@@ -16,21 +16,14 @@ class AddressesController < ApplicationController
     redirect_to addresses_path
   end
 
-
-
-  def show
-    @item = Item.find(params[:id])
-  end
-
   def edit
-    @item = Item.find(params[:id])
+    @address = Address.find(params[:id])
   end
 
   def update
-    item = Item.find(params[:id])
-
-    item.update(item_params)
-    redirect_to admin_item_path(item.id)
+    address = Address.find(params[:id])
+    address.update(address_params)
+    redirect_to addresses_path
   end
 
 
