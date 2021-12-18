@@ -57,7 +57,7 @@
           </td>
           <td>
             <%= link_to "編集する", edit_address_path(address.id), class: "p-2 btn btn-success" %>
-            削除する
+            <%= link_to "削除する", address_path(address.id), method: :delete %>
           </td>
 
 
