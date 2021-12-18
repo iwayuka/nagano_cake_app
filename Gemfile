@@ -73,3 +73,6 @@ gem "refile-mini_magick"
 # レイアウトを整えるBootstrapのgem
 gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
+
+# ページング機能の追加
+gem 'kaminari','~> 1.2.1'
