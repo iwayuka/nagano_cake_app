@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="mb-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 my-3 bg-secondary text-white">商品一覧</h4>
+    </div>
+  </div>
+
+  <!-- 商品一覧をテーブル を使用して表示 -->
+  <div class="row">
+    <div class="col-lg-12 d-flex justify-content-center">
+      <table class="table">
+        <tr class="table-light">
+          <th scope="col" style="width: 7%">商品ID</th>
+          <th scope="col" style="width: 35%">商品名</th>
+          <th scope="col" style="width: 9%">税抜価格</th>
+          <th scope="col" style="width: 35%">ジャンル</th>
+          <th scope="col" style="width: 14%">ステータス</th>
+        </tr>
+          <% @items.each do |item| %>
+        <tr>
+          <td>
+            <%= item.id %>
+          </td>
+          <td>
+            <%= link_to item.name, admin_item_path(item.id), class:"link-dark" %>
+          </td>
+          <td>
+            <%= item.price.to_s(:delimited) %>
+          </td>
+          <td>
+            <%= item.genre.name %>
+          </td>
+          <td>
+            <%= item.is_active ? '販売中':'販売停止中' %>
+          </td>
+        </tr>
+          <% end %>
+      </table>
+    </div>
+  </div>
+  <!--以上 -->
+</div>
+
+

@@ -1,16 +1,49 @@
-<h1>ジャンル一覧・追加</h1>
+<div class="container">
+  <div class="mb-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 my-3 bg-secondary text-white" >ジャンル一覧・追加</h4>
+    </div>
+  </div>
 
+  <div class="mb-3 row">
+    <div class="col" >
+      <form class="form-inline">
+        <div class="mx-4 form-group">
+          <p></p><strong>ジャンル名</strong></p>
+        </div>
+        <!-- form_with部分 -->
+        <%= form_with model:@genre, url:'/admin/genres', local:true do |f| %>
+        <div class="mx-4 form-group">
+          <%= f.text_field :name, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit '新規登録', class: "px-4 py-2 mx-4 btn btn-success" %>
+        </div>
+        <% end %>
+      </form>
+    </div>
+  </div>
 
-  <h4>ジャンル</h4>
-<!-- form_with部分 -->
-<%= form_with model:@genre, url:'/admin/genres', local:true do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit '新規登録' %>
-
-<% end %>
 <!-- テーブルにてレイアウト調整が必要 -->
-  <p>ジャンル</p>
-<% @genres.each do |genre| %>
-  <span><%= genre.name %></span>
-  <%= link_to "編集する", edit_admin_genre_path(genre.id) %>
-<% end %>
+  <div class="row">
+    <div class="col-lg-4">
+      <table class="table">
+        <tr class="table-light">
+          <th scope="col " style="width: 30%">ジャンル</th>
+          <th scope="col" style="width: 15%"></th>
+        </tr>
+        <% @genres.each do |genre| %>
+        <tr>
+          <td>
+            <%= genre.name %>
+          </td>
+          <td>
+            <%= link_to "編集する", edit_admin_genre_path(genre.id), class: "p-2 btn btn-success" %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="mb-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 my-3 bg-secondary text-white">会員一覧</h4>
+    </div>
+  </div>
+
+    <!-- 氏名一覧をテーブル を使用して表示 -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-8">
+      <table class="table">
+        <tr class="table-light">
+          <th scope="col" style="width: 12%">会員ID</th>
+          <th scope="col" style="width: 35%">氏名</th>
+          <th scope="col" style="width: 35%">メールアドレス</th>
+          <th scope="col" style="width: 18%">ステータス</th>
+        </tr>
+        <% @customers.each do |customer| %>
+        <tr>
+          <td>
+            <%= customer.id %>
+          </td>
+          <td><!-- 氏名に会員詳細画面へのリンクを記述 -->
+            <%= link_to customer.last_name, admin_customer_path(customer.id), class:"link-dark" %>
+          </td>
+          <td>
+            <%= customer.email %>
+          </td>
+          <td>
+            <%= customer.is_deleted ? '退会':'有効' %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
