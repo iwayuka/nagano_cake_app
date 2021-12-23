@@ -11225,3 +11225,52 @@ Processing by ItemController#show as HTML
 Completed 200 OK in 302ms (Views: 283.3ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/admin/items/new" for 60.112.126.23 at 2021-12-23 20:25:47 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/new.html.erb:38
+  Rendered admin/items/new.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 940ms (Views: 912.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/items" for 60.112.126.23 at 2021-12-23 20:26:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m0noH9ebcB0KZKkSWov2JSWAkPDP+vcBsSdD97BbePDYAbJGWcT9iyrSUSKjTwrrQv4xI+varqApVudm9YzX4w==", "item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000000077f24c8 @tempfile=#<Tempfile:/tmp/RackMultipart20211223-4509-1t4fyfu.jpeg>, @original_filename="E1BFBBA2-4308-409D-BB00-273D329AF074_4_5005_c.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"item[image]\"; filename=\"E1BFBBA2-4308-409D-BB00-273D329AF074_4_5005_c.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"テストケーキ2", "introduction"=>"22222", "genre_id"=>"2", "price"=>"2000", "is_active"=>"1"}, "commit"=>"新規登録"}
+Unpermitted parameter: :image
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/items_controller.rb:11
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:11
+  [1m[36mItem Create (3.4ms)[0m  [1m[32mINSERT INTO "items" ("genre_id", "name", "introduction", "price", "is_active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["genre_id", 2], ["name", "テストケーキ2"], ["introduction", "22222"], ["price", 2000], ["is_active", 1], ["created_at", "2021-12-23 20:26:04.731828"], ["updated_at", "2021-12-23 20:26:04.731828"]]
+  ↳ app/controllers/admin/items_controller.rb:11
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/items_controller.rb:11
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/admin/items
+Completed 302 Found in 42ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/admin/items" for 60.112.126.23 at 2021-12-23 20:26:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:19
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:31
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:31
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:31
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:31
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:31
+  Rendered admin/items/index.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 194ms (Views: 188.6ms | ActiveRecord: 0.6ms)
+
+

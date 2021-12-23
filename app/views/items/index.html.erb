@@ -1,0 +1,6 @@
+<h2>商品一覧</h2><h4>(全X件)</h4>
+<% @items.each do |item| %>
+<%= attachment_image_tag item, :image %>
+<%= item.name %>
+<%= item.price %>
+<% end %>
