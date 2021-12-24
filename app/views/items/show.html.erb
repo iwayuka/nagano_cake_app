@@ -1,7 +1,6 @@
 <h4><%= @item.name %></h4>
 <p><strong><%= @item.introduction %></strong></p>
 <span><strong>¥<%= @item.price.to_s(:delimited) %></strong></span><span>(税込)</span>
-require "pry"
 
  <%= form_with model:@cart_item, url:'/items', local:true do |f| %>
       <% if customer_signed_in? %>
@@ -11,4 +10,3 @@ require "pry"
         <%= f.select :amount, *[1..3] %>
         <%= f.submit "カートに入れる", class: "btn btn-primary" %>
     <% end %>
-binding.pry
