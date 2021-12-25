@@ -1,4 +1,40 @@
-<% @cart_items.each do |cart_item| %>
-<%= cart_item.item.name %>
-<%= cart_item.customer.last_name %>
+<h4>ショッピングカート</h4>
+
+<table>
+  <tr>
+　  <th>商品名</th>
+    <th>単価(税込)</th>
+    <th>数量</th>
+    <th>小計</th>
+  </tr>
+  <% @sum = 0 %>
+  <% @cart_items.each do |cart_item| %>
+
+  <tr>
+    <td>
+      <%= cart_item.item.name %>
+    </td>
+    <td>
+      <%= cart_item.item.with_tax_price.to_s(:delimited) %>
+    </td>
+    <td>
+      <%= form_with model:cart_item, url:"/cart_items/#{cart_item.id}", local:true do |f| %>
+      <%= f.select :amount, *[1..3] %>
+      <%= f.submit '変更', method: :patch, class: "px-4 py-2 mx-4 btn btn-success" %>
+      <% end %>
+    </td>
+    <td>
+      <%= cart_item.subtotal%>
+      <% @sum += cart_item.subtotal %>
+
+    </td>
+    <td>
+      削除する
+    </td>
+　</tr>
+
+
+
 <% end %>
+</table>
+合計金額 <%= @sum %>

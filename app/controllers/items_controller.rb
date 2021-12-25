@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   private
   # ストロングパラメータ
   def cart_item_params
-  params.require(:cart_item).permit(:item_id, :customer, :amount)
+  params.require(:cart_item).permit(:item_id, :customer_id, :amount)
   end
 
 

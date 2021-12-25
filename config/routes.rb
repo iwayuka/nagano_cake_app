@@ -31,8 +31,10 @@ patch '/customers/:id/withdrawal' => 'customers#withdrawal', as: 'withdrawal'
 resources :addresses
 
 #会員側商品一覧のルート
-resources :item, only: [:index, :show]
+resources :items, only: [:index, :show, :create]
 
+resources :cart_items, only: [:index, :update]
+post '/cart_items/:id' => 'cart_items#update'
 
 namespace :admin do
     resources :genres, only: [:index, :create, :edit, :update]
