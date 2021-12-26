@@ -1,5 +1,7 @@
 <h4>ショッピングカート</h4>
 
+<%= button_to "カートを空にする", destroy_all_cart_items_path, method: :delete %>
+
 <table>
   <tr>
 　  <th>商品名</th>

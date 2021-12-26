@@ -33,7 +33,11 @@ resources :addresses
 #会員側商品一覧のルート
 resources :items, only: [:index, :show, :create]
 
-resources :cart_items, only: [:index, :update, :destroy]
+resources :cart_items, only: [:index, :update, :destroy] do
+  collection do
+    delete 'destroy_all'
+  end
+end
 
 
 namespace :admin do

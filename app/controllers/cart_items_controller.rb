@@ -16,6 +16,11 @@ class CartItemsController < ApplicationController
     redirect_to cart_items_path
   end
 
+  def destroy_all
+  CartItem.destroy_all
+  redirect_to cart_items_path
+end
+
    private
   # ストロングパラメータ
   def cart_item_params
