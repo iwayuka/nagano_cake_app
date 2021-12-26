@@ -33,8 +33,8 @@ resources :addresses
 #会員側商品一覧のルート
 resources :items, only: [:index, :show, :create]
 
-resources :cart_items, only: [:index, :update]
-post '/cart_items/:id' => 'cart_items#update'
+resources :cart_items, only: [:index, :update, :destroy]
+
 
 namespace :admin do
     resources :genres, only: [:index, :create, :edit, :update]
