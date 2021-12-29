@@ -21,7 +21,7 @@
     </td>
     <td>
       <%= form_with model:cart_item, url:"/cart_items/#{cart_item.id}", local:true do |f| %>
-      <%= f.select :amount, *[1..3] %>
+      <%= f.select :amount, *[1..5] %>
       <%= f.submit '変更', method: :patch, class: "px-4 py-2 mx-4 btn btn-success" %>
       <% end %>
     </td>

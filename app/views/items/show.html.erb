@@ -7,6 +7,6 @@
         <%= f.hidden_field :customer_id, :value => current_customer.id %>
       <% end %>
         <%= f.hidden_field :item_id, :value => @item.id %>
-        <%= f.select :amount, *[1..3] %>
+        <%= f.select :amount, *[1..5] %>
         <%= f.submit "カートに入れる", class: "btn btn-primary" %>
     <% end %>

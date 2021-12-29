@@ -9,14 +9,23 @@ class ItemsController < ApplicationController
     @cart_item = CartItem.new
   end
 
-  def create
+    def create
     # １. データを新規登録するためのインスタンス作成
     cart_item = CartItem.new(cart_item_params)
     # ２. データをデータベースに保存するためのsaveメソッド実行
-    cart_item.save
-    # ３. 商品詳細画面へリダイレクト ※データの保存がうまくできるか確認のため、一度一覧画面へリダイレクト
-    redirect_to items_path
+    if CartItem.find_by(item_id: params[:cart_item][:item_id])
+      cart_item = CartItem.find_by(item_id: params[:cart_item][:item_id])
+      cart_item.amount += params[:cart_item][:amount].to_i
+      cart_item.save
+      redirect_to cart_items_path
+      # ３. 商品詳細画面へリダイレクト ※データの保存がうまくできるか確認のため、一度一覧画面へリダイレクト
+    else
+      cart_item.save
+      # ３. 商品詳細画面へリダイレクト ※データの保存がうまくできるか確認のため、一度一覧画面へリダイレクト
+      redirect_to cart_items_path
+    end
   end
+
 
   private
   # ストロングパラメータ
@@ -27,3 +36,5 @@ class ItemsController < ApplicationController
 
 
 end
+
+

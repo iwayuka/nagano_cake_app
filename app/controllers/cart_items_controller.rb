@@ -13,7 +13,6 @@ class CartItemsController < ApplicationController
   def destroy
     cart_item = CartItem.find(params[:id])
     cart_item.destroy
-    redirect_to cart_items_path
   end
 
   def destroy_all
@@ -24,7 +23,7 @@ end
    private
   # ストロングパラメータ
   def cart_item_params
-  params.require(:cart_item).permit(:amount)
+  params.require(:cart_item).permit(:item_id, :customer_id, :amount)
   end
 
 
