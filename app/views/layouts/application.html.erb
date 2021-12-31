@@ -50,10 +50,10 @@
                 <%= link_to "マイページ", customers_mypage_path, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "商品一覧", root_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
+                <%= link_to "商品一覧", items_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "カート", admin_root_path, class:"py-2 px-4 m-3 btn btn-outline-dark nav-link" %>
+                <%= link_to "カート", cart_items_path, class:"py-2 px-4 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
                 <%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class:"py-2 px-1 m-3 btn btn-outline-dark nav-link" %>
@@ -65,7 +65,7 @@
                 <%= link_to "About", about_path, class:"py-2 px-3 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "商品一覧", admin_root_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
+                <%= link_to "商品一覧", items_path, class:"py-2 px-2 m-3 btn btn-outline-dark nav-link" %>
               </li>
               <li class="nav-item">
                 <%= link_to "新規登録", new_customer_registration_path, class:"py-2 px-2  m-3 btn btn-outline-dark nav-link" %>

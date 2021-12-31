@@ -39,6 +39,7 @@ resources :cart_items, only: [:index, :update, :destroy] do
   end
 end
 
+resources :orders, only: [:new, :create]
 
 namespace :admin do
     resources :genres, only: [:index, :create, :edit, :update]

@@ -17993,3 +17993,1082 @@ Processing by CartItemsController#index as HTML
 Completed 200 OK in 102ms (Views: 100.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:13:48 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (30.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 554ms (Views: 534.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-29 07:13:49 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#mypage as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+  Rendering customers/mypage.html.erb within layouts/application
+  Rendered customers/mypage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 126ms (Views: 118.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 60.112.126.23 at 2021-12-29 07:13:52 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (3.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 99ms (Views: 97.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:13:54 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (7.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 60.112.126.23 at 2021-12-29 07:13:55 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (2.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 115ms (Views: 114.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 60.112.126.23 at 2021-12-29 07:17:12 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (11.4ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 672ms (Views: 659.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/items/1" for 60.112.126.23 at 2021-12-29 07:17:15 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:6
+  Rendered items/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 263ms (Views: 252.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/items" for 60.112.126.23 at 2021-12-29 07:17:18 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O9GL5CUrKUizNvE1slVbfSA89Z9JvbBNZbOUp/uvFv32twB/H1fCD4F9CBeXjPP+Xx/EBmZJ4iA5EVh5IaOASQ==", "cart_item"=>{"customer_id"=>"2", "item_id"=>"1", "amount"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:23
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:23
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:23
+  [1m[36mCartItem Create (4.2ms)[0m  [1m[32mINSERT INTO "cart_items" ("item_id", "customer_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["item_id", 1], ["customer_id", 2], ["amount", 1], ["created_at", "2021-12-29 07:17:18.653868"], ["updated_at", "2021-12-29 07:17:18.653868"]]
+  ↳ app/controllers/items_controller.rb:23
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:23
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 40ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:17:18 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (10.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/customers/sign_out" for 60.112.126.23 at 2021-12-29 07:17:24 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EH68ez0ehzbN/TmMzPZqoIoZVUebMcIkTZE4Nzv85+TAFHtp+DwlG/mnKjdX8O7+JAHq5xcSjLexs6i28RRx+A=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 19ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:17:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 104ms (Views: 101.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:17:29 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 105ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:17:37 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UrCoPBbvQJl8ebWDqObN09M5IiPQ0zwjH4FyjrMEl0B9u4KaHgfJgFCKpf+rgnmqhJgcTf9KumkbnIJEkYlLWg==", "customer"=>{"email"=>"55555@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "55555@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.2ms)
+
+
+Processing by Customers::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UrCoPBbvQJl8ebWDqObN09M5IiPQ0zwjH4FyjrMEl0B9u4KaHgfJgFCKpf+rgnmqhJgcTf9KumkbnIJEkYlLWg==", "customer"=>{"email"=>"55555@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 435ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:17:46 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FWkkOLia0s6IOZGjTjpe3Tmf4axL1JNfWpAu4Nv8/b4bMM1ub5z81ruP/2S7LPNoDgFtBGbFKhuE6veZF2vYqA==", "customer"=>{"email"=>"55555@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "55555@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.1ms)
+
+
+Processing by Customers::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FWkkOLia0s6IOZGjTjpe3Tmf4axL1JNfWpAu4Nv8/b4bMM1ub5z81ruP/2S7LPNoDgFtBGbFKhuE6veZF2vYqA==", "customer"=>{"email"=>"55555@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 399ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:17:56 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rKhROo7jNr4Mc6NOlj84w3U+3ESTt2+P9R75nLId5R+i8bhsWeUYpj/FzYljKZV2QqBQ7L6m1ssrZCDlforACQ==", "customer"=>{"email"=>"3333@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "3333@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 311ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:17:57 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:18:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2UUr9jE/Z34zi8c/OEHNjN7hzudbARvN/m7Utmqa4YnXHMKg5jlJZgA9qfjNV2A56X9CT3YQookgFA3Ppg3Enw==", "customer"=>{"email"=>"11111@gamil.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "11111@gamil.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 321ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:18:07 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:18:10 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (9.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:20:40 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CartItemsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for nil:NilClass):
+  
+app/controllers/cart_items_controller.rb:4:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:24:42 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (12.8ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 514ms (Views: 492.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:24:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for #<Customer:0x00007f0cb4056dc0>
+Did you mean?  cart_item
+               cart_item=):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:25:30 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (10.0ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 154ms (Views: 148.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:25:31 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `page' for nil:NilClass):
+  
+app/controllers/cart_items_controller.rb:4:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:26:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (11.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 144ms (Views: 138.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:26:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `customer' for #<CartItemsController:0x00007f0ca97a7d28>
+Did you mean?  customer_url):
+  
+app/controllers/cart_items_controller.rb:4:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:26:44 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (9.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 139ms (Views: 131.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:26:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.1ms)
+
+
+  
+NameError (undefined local variable or method `customer' for #<CartItemsController:0x00007f0ca81dd650>
+Did you mean?  @customer):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:26:58 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (9.8ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 127ms (Views: 120.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:26:59 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:5
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `page' for nil:NilClass):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:29:55 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (11.7ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 595ms (Views: 583.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:29:59 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 130ms (Views: 128.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:30:00 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:5
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `page' for nil:NilClass):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:30:02 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (7.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 138ms (Views: 136.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:30:03 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:5
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `page' for nil:NilClass):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:31:49 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (13.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 143ms (Views: 136.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:31:51 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+  Rendering cart_items/index.html.erb within layouts/application
+  Rendered cart_items/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:     <th>小計</th>
+    11:   </tr>
+    12:   <% @sum = 0 %>
+    13:   <% @cart_items.each do |cart_item| %>
+    14: 
+    15:   <tr>
+    16:     <td>
+  
+app/views/cart_items/index.html.erb:13:in `_app_views_cart_items_index_html_erb___1502907719005916788_69904284662240'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:38:29 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (12.9ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 742ms (Views: 729.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:38:31 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:5
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `page' for nil:NilClass):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:39:40 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (17.0ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 151ms (Views: 143.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:39:42 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting ']'
+...t.all.page(params[:customer_id)
+...                              ^
+/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting ']'
+app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:39:56 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (10.4ms)
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 158ms (Views: 151.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:39:57 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:4: syntax error, unexpected '.'
+    @cart_items = .all.page(params[:customer_id)
+                  ^
+/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting ']'
+... .all.page(params[:customer_id)
+...                              ^
+/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/cart_items_controller.rb:4: syntax error, unexpected '.'
+app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting ']'
+app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:40:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (11.6ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 134ms (Views: 127.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:40:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting ']'
+...m.all.page(params[:customer_id)
+...                              ^
+/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting ']'
+app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:40:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (9.7ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 139ms (Views: 132.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:40:27 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (19.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 121ms (Views: 117.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:42:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e(:customer_id current_customer.id)
+...               ^~~~~~~~~~~~~~~~
+/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting end
+...ustomer_id current_customer.id)
+...                              ^
+/home/ec2-user/environment/nagano_cake/app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/cart_items_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/cart_items_controller.rb:4: syntax error, unexpected ')', expecting end
+app/controllers/cart_items_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:43:11 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (11.7ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 133ms (Views: 125.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:43:12 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for :current_customer:Symbol):
+  
+app/controllers/cart_items_controller.rb:4:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:48:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (10.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 136ms (Views: 129.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:48:10 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `cart_item' for 4:Integer):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:48:32 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (10.6ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 142ms (Views: 135.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:48:34 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for 4:Integer):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:49:21 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 129ms (Views: 127.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/customers/sign_out" for 60.112.126.23 at 2021-12-29 07:49:22 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JVXk9TsTp9Ikvu4F7dzYzTBFPw09xP1olpRxubl1ZfHZgunRFXcyhOzDC/gN/W0KgH892cQ5kX91/UyfsXSb4Q=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:49:23 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 101ms (Views: 100.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:49:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 103ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.112.126.23 at 2021-12-29 07:49:31 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UEZM1RKjgl1jYAcPyJPeni7+Ze+OXEpXaqMtj+l7btrJYODPnWeW3Dn5MftuwC0oI1pABeBrndzDvX79X65LGw==", "customer"=>{"email"=>"2222@gamil.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "2222@gamil.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 311ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:49:31 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (2.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 106ms (Views: 105.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:49:36 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for 2:Integer):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:50:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 103ms (Views: 101.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:50:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:4
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for 2:Integer):
+  
+app/controllers/cart_items_controller.rb:5:in `index'
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:55:22 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 518ms (Views: 506.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-29 07:55:22 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (28.2ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 224ms (Views: 222.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:55:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (20.2ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 132ms (Views: 129.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers/mypage" for 60.112.126.23 at 2021-12-29 07:55:28 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#mypage as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:4
+  Rendering customers/mypage.html.erb within layouts/application
+  Rendered customers/mypage.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 100ms (Views: 94.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:55:30 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (9.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 127ms (Views: 124.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/cart_items/36" for 60.112.126.23 at 2021-12-29 07:55:38 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/4kvjg3eiby+TPK7DeMm+32Qx9LEsEs2Gn2a/2jPQ2Z6fPTJ1NjFRk1eln6PDLbvdJbf8MYeTso61nlGSSOOA==", "cart_item"=>{"amount"=>"3"}, "commit"=>"変更", "id"=>"36"}
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:10
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:10
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:10
+  [1m[36mCartItem Update (2.0ms)[0m  [1m[33mUPDATE "cart_items" SET "amount" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["amount", 3], ["updated_at", "2021-12-29 07:55:38.134963"], ["id", 36]]
+  ↳ app/controllers/cart_items_controller.rb:10
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:10
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 28ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:55:38 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (9.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 112ms (Views: 110.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items" for 60.112.126.23 at 2021-12-29 07:55:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (8.5ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/5" for 60.112.126.23 at 2021-12-29 07:55:46 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:6
+  Rendered items/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 119ms (Views: 114.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/items" for 60.112.126.23 at 2021-12-29 07:55:48 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GC+lXqfIbTrxCgm/Eza84vzYJYHQgLFUXAhpa1kve4lAynd89xMXfaBaPeq/eoRApNO2xd4kGHzvqfSNOMK/Ig==", "cart_item"=>{"customer_id"=>"2", "item_id"=>"5", "amount"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."item_id" = ? LIMIT ?[0m  [["item_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:23
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:23
+  [1m[36mCartItem Create (1.8ms)[0m  [1m[32mINSERT INTO "cart_items" ("item_id", "customer_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["item_id", 5], ["customer_id", 2], ["amount", 1], ["created_at", "2021-12-29 07:55:48.493987"], ["updated_at", "2021-12-29 07:55:48.493987"]]
+  ↳ app/controllers/items_controller.rb:23
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:23
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 18ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/cart_items" for 60.112.126.23 at 2021-12-29 07:55:48 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/cart_items/index.html.erb:13
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:17
+  Rendered cart_items/index.html.erb within layouts/application (13.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 117ms (Views: 115.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-31 06:20:16 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (43.6ms)
+Started GET "/" for 60.112.126.23 at 2021-12-31 06:20:17 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (4.0ms)
+Started GET "/" for 60.112.126.23 at 2021-12-31 06:20:18 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.9ms)
+Started GET "/" for 60.112.126.23 at 2021-12-31 06:20:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 9523ms (Views: 9521.8ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 9921ms (Views: 9888.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 8534ms (Views: 8524.4ms | ActiveRecord: 6.6ms)
+
+
+Completed 200 OK in 1247ms (Views: 1226.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-31 06:20:28 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.4ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 95ms (Views: 93.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2021-12-31 06:20:37 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `order' for #<OrdersController:0x00007f794dd40f08>):
+  
+app/controllers/orders_controller.rb:4:in `new'
+Started GET "/orders/new" for 60.112.126.23 at 2021-12-31 06:21:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `rder' for #<OrdersController:0x00007f7958d2c5c0>):
+  
+app/controllers/orders_controller.rb:4:in `new'
+Started GET "/orders/new" for 60.112.126.23 at 2021-12-31 06:21:18 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 142ms (Views: 128.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2021-12-31 06:27:39 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `payment_methods' for #<Class:0x0000000004b218e0>
+Did you mean?  private_methods):
+    4: 
+    5: <%= form_with model:@orders, url:'/orders', local:true do |f| %>
+    6: 
+    7: <%= f.radio_button :payment_method, Order.payment_methods.key(0) %>
+    8: <%= f.label :payment_method, Order.payment_methods_i18n[:credit_card] %>
+    9: 
+   10: <%= f.radio_button :payment_method, Order.payment_methods.key(1) %>
+  
+app/views/orders/new.html.erb:7:in `block in _app_views_orders_new_html_erb__4461038305359466630_40045820'
+app/views/orders/new.html.erb:5:in `_app_views_orders_new_html_erb__4461038305359466630_40045820'

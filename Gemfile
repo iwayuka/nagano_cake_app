@@ -76,3 +76,5 @@ gem 'jquery-rails'
 
 # ページング機能の追加
 gem 'kaminari','~> 1.2.1'
+
+gem "enum_help"
