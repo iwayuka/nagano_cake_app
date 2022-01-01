@@ -19072,3 +19072,1397 @@ Did you mean?  private_methods):
   
 app/views/orders/new.html.erb:7:in `block in _app_views_orders_new_html_erb__4461038305359466630_40045820'
 app/views/orders/new.html.erb:5:in `_app_views_orders_new_html_erb__4461038305359466630_40045820'
+Started GET "/" for 60.112.126.23 at 2021-12-31 08:43:37 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 624ms (Views: 604.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-12-31 08:43:39 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.7ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 103ms (Views: 100.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2021-12-31 08:43:42 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (93.3ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_address' for #<Address:0x00007f7d52014f88>
+Did you mean?  address):
+    18: <br />
+    19: <%= f.radio_button :select_address, 2 %>
+    20:   <%= f.label :select_address_2, "登録済住所から選択" %>
+    21:   <%= f.select :address_id, options_from_collection_for_select(Address.all, :id, :full_address) %>
+    22: <br />
+    23: <%= f.radio_button :select_address, 3 %>
+    24:   <%= f.label :select_address_3, "新しいお届け先" %>
+  
+app/views/orders/new.html.erb:21:in `block in _app_views_orders_new_html_erb___273499959824813617_70088106225760'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___273499959824813617_70088106225760'
+Started GET "/orders/new" for 60.112.126.23 at 2021-12-31 08:45:02 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 124ms (Views: 109.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/orders" for 60.112.126.23 at 2021-12-31 08:45:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sFmIbWMg4OJ7FUWYXEfjAdYPQLAwl8SxDF7MTdgdro0pRkoDzsFpsgs6FBHbLrHxHHX9ZkhrbeASTrB+lHPs+Q==", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:17:in `order_params'
+app/controllers/orders_controller.rb:8:in `create'
+Started GET "/" for 60.112.126.23 at 2022-01-01 01:17:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 672ms (Views: 655.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 60.112.126.23 at 2022-01-01 01:17:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (2.9ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 142ms (Views: 139.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/items/new" for 60.112.126.23 at 2022-01-01 01:17:15 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/new.html.erb:38
+  Rendered admin/items/new.html.erb within layouts/application (85.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 202ms (Views: 199.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 01:17:23 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/orders_controller.rb:45: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/orders_controller.rb:45: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 01:17:48 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 164ms (Views: 142.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/orders/confirm" for 60.112.126.23 at 2022-01-01 01:19:33 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/orders/confirm"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders/confirm" for 60.112.126.23 at 2022-01-01 01:32:02 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:42:in `order_params'
+app/controllers/orders_controller.rb:8:in `confirm'
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 01:34:13 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (93.2ms)
+Completed 200 OK in 786ms (Views: 766.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/orders" for 60.112.126.23 at 2022-01-01 01:34:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nfNsxrmmtJCeLc5f59JTimq6v8vyKogc3TJRDlwXu44E7K6oFEc9wO4Cn9ZguwF6oMACHYrWIU3DIi09EHn5+g==", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 500 Internal Server Error in 783036ms (ActiveRecord: 0.7ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/orders_controller.rb:35:in `create'
+Started GET "/" for 60.112.126.23 at 2022-01-01 01:50:23 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (13.3ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 499ms (Views: 486.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 01:50:27 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 270ms (Views: 255.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/orders" for 60.112.126.23 at 2022-01-01 01:50:29 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for OrdersController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/orders" for 60.112.126.23 at 2022-01-01 01:53:34 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6IJr1pkPS3vxT82BbrNa8JheoyJ+Xm9emUxsiSzdCZivcvB94W0fZ/qbr+C05+bCBvHWvEF0OxkdU2BaN02Ug==", "payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 500 Internal Server Error in 203813ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/orders_controller.rb:36:in `create'
+Started POST "/orders" for 60.112.126.23 at 2022-01-01 01:57:35 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6IJr1pkPS3vxT82BbrNa8JheoyJ+Xm9emUxsiSzdCZivcvB94W0fZ/qbr+C05+bCBvHWvEF0OxkdU2BaN02Ug==", "payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 500 Internal Server Error in 137515ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/orders_controller.rb:36:in `create'
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:01:31 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (26.4ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 622ms (Views: 603.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 02:01:36 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 184ms (Views: 171.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:01:42 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X/W9bCySZM6i3GH7x25Av7QO3LefpRpyY/8bqLy4w4zG6n8CgXPtntLzMHJABxJPfnRhYedZsyN972eb8NaB+A==", "payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:11:33 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (38.8ms)
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:11:34 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 980ms (Views: 954.2ms | ActiveRecord: 1.8ms)
+
+
+Completed 200 OK in 338ms (Views: 337.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:11:35 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (5.1ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 233ms (Views: 231.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 02:11:41 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (113.8ms)
+Completed 200 OK in 308ms (Views: 293.1ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:11:51 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8h4b7Qaj/icwqiJlVvBysdPeEBTzqGkbdTNcoMT5TCtrAdmDq0J3d0CFc+zRmSBBGaStwotUwEprIyCTiJcOXw==", "payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 500 Internal Server Error in 85955ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+  
+app/controllers/orders_controller.rb:9:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:13:44 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8h4b7Qaj/icwqiJlVvBysdPeEBTzqGkbdTNcoMT5TCtrAdmDq0J3d0CFc+zRmSBBGaStwotUwEprIyCTiJcOXw==", "payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 500 Internal Server Error in 8913ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+  
+app/controllers/orders_controller.rb:9:in `confirm'
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:15:02 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (23.9ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 843ms (Views: 823.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 02:15:07 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 283ms (Views: 261.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:15:12 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WDiTYTmX67Pf4sdjvV9kA/3dUn86bBz/BHPdAaiL2IrBJ1EPlHZi46/Nluo6NjbzN6fvqUKQta4aY6Ey5OWa/g==", "payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:43:in `order_params'
+app/controllers/orders_controller.rb:8:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:30:56 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WDiTYTmX67Pf4sdjvV9kA/3dUn86bBz/BHPdAaiL2IrBJ1EPlHZi46/Nluo6NjbzN6fvqUKQta4aY6Ey5OWa/g==", "payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 400 Bad Request in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:14:in `order_params'
+app/controllers/orders_controller.rb:8:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:32:12 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WDiTYTmX67Pf4sdjvV9kA/3dUn86bBz/BHPdAaiL2IrBJ1EPlHZi46/Nluo6NjbzN6fvqUKQta4aY6Ey5OWa/g==", "payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>"", "commit"=>"確認画面へ進む"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:14:in `order_params'
+app/controllers/orders_controller.rb:8:in `confirm'
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:33:08 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 577ms (Views: 558.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:33:10 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.6ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 169ms (Views: 167.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 02:33:14 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (89.4ms)
+Completed 200 OK in 228ms (Views: 215.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:33:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0Tb8rIBly00nkEnY9PuGkTty7BW/8lCgBOZbS1T6cwaWxmcH+AefUSxEK7kurzqjpd2Zi4DYBOeA+VeYT2ruA==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id, :postal_code, :address, :name
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 59320ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:34:53 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0Tb8rIBly00nkEnY9PuGkTty7BW/8lCgBOZbS1T6cwaWxmcH+AefUSxEK7kurzqjpd2Zi4DYBOeA+VeYT2ruA==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Address(#43958080) expected, got "" which is an instance of String(#5447120)):
+  
+app/controllers/orders_controller.rb:8:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:37:35 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0Tb8rIBly00nkEnY9PuGkTty7BW/8lCgBOZbS1T6cwaWxmcH+AefUSxEK7kurzqjpd2Zi4DYBOeA+VeYT2ruA==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Address(#40471460) expected, got "" which is an instance of String(#5537240)):
+  
+app/controllers/orders_controller.rb:8:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:43:52 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0Tb8rIBly00nkEnY9PuGkTty7BW/8lCgBOZbS1T6cwaWxmcH+AefUSxEK7kurzqjpd2Zi4DYBOeA+VeYT2ruA==", "order"=>{"payment_method"=>"credit_card", "address_id"=>"2", "select_address"=>"3", "postal_code"=>"3333333", "address"=>"東京", "name"=>"東京さん"}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :address_id, :select_address
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Address(#40471460) expected, got "東京" which is an instance of String(#5537240)):
+  
+app/controllers/orders_controller.rb:8:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:47:16 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0Tb8rIBly00nkEnY9PuGkTty7BW/8lCgBOZbS1T6cwaWxmcH+AefUSxEK7kurzqjpd2Zi4DYBOeA+VeYT2ruA==", "order"=>{"payment_method"=>"credit_card", "address_id"=>"2", "select_address"=>"3", "postal_code"=>"3333333", "address"=>"東京", "name"=>"東京さん"}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :address_id, :select_address
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Address(#45997860) expected, got "東京" which is an instance of String(#7486940)):
+  
+app/controllers/orders_controller.rb:8:in `confirm'
+Started GET "/" for 60.112.126.23 at 2022-01-01 02:48:12 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (22.9ms)
+  [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 691ms (Views: 659.3ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 02:48:18 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (62.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 185ms (Views: 172.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:48:24 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTd/8v+SnkM4NfPnk3QRhfWpiGLm5Y9YI/u0fwDqQyH4KL2cUnMXE0gaom4UHUN1P9M1tJ4ZJgk968hMTIQBVQ==", "order"=>{"postal_code"=>"3333333", "address"=>"東京", "name"=>"東京さん"}, "commit"=>"確認画面へ進む"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Address(#69892206289140) expected, got "東京" which is an instance of String(#11148760)):
+  
+app/controllers/orders_controller.rb:8:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:50:07 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTd/8v+SnkM4NfPnk3QRhfWpiGLm5Y9YI/u0fwDqQyH4KL2cUnMXE0gaom4UHUN1P9M1tJ4ZJgk968hMTIQBVQ==", "order"=>{"postal_code"=>"3333333", "address"=>"東京", "name"=>"東京さん"}, "commit"=>"確認画面へ進む"}
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:53:46 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 254054ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/orders_controller.rb:21: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/orders_controller.rb:21: syntax error, unexpected end, expecting end-of-input
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:54:27 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/orders_controller.rb:21: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/orders_controller.rb:21: syntax error, unexpected end, expecting end-of-input
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:54:39 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTd/8v+SnkM4NfPnk3QRhfWpiGLm5Y9YI/u0fwDqQyH4KL2cUnMXE0gaom4UHUN1P9M1tJ4ZJgk968hMTIQBVQ==", "order"=>{"postal_code"=>"3333333", "address"=>"東京", "name"=>"東京さん"}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 79631ms (ActiveRecord: 2.6ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:56:19 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTd/8v+SnkM4NfPnk3QRhfWpiGLm5Y9YI/u0fwDqQyH4KL2cUnMXE0gaom4UHUN1P9M1tJ4ZJgk968hMTIQBVQ==", "order"=>{"postal_code"=>"3333333", "address"=>"東京", "name"=>"東京さん"}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 195912ms (ActiveRecord: 3.3ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 02:59:41 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:15
+  Rendered orders/new.html.erb within layouts/application (89.9ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 737ms (Views: 717.9ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 02:59:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDoUPSxyBFEGfzODBUofbMPxVe3NGsAwDHJ9/rM4bFUNJdZTgZONAXZQYgqCI02cCYvoO7XmaWESYgHN/1YuIQ==", "order"=>{"address_id"=>"3"}, "commit"=>"確認画面へ進む"}
+Unpermitted parameter: :address_id
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 77713ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 03:01:11 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDoUPSxyBFEGfzODBUofbMPxVe3NGsAwDHJ9/rM4bFUNJdZTgZONAXZQYgqCI02cCYvoO7XmaWESYgHN/1YuIQ==", "order"=>{"payment_method"=>"transfer", "address_id"=>"2"}, "commit"=>"確認画面へ進む"}
+Unpermitted parameter: :address_id
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 29929ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2022-01-01 03:02:05 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 221ms (Views: 214.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 03:04:28 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:15
+  Rendered orders/new.html.erb within layouts/application (150.8ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 796ms (Views: 761.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 03:04:36 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ExgYPlT/iXhHkQiQQeUVUKtUYRAGZl0qQikLOOxTiF+KB9pQ+R4AKDe+WRnGjEegYS7cxn6a9HtcOXcLoD3KKw==", "order"=>{"payment_method"=>"transfer", "address_id"=>"2"}, "commit"=>"確認画面へ進む"}
+Unpermitted parameter: :address_id
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 64879ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 03:05:49 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:15
+  Rendered orders/new.html.erb within layouts/application (15.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 243ms (Views: 213.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 03:06:00 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:15
+  Rendered orders/new.html.erb within layouts/application (21.1ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 169ms (Views: 153.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 03:06:27 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E09ZDUwD+bDm74c1JcyG5BJMdt10QYR/Vu3o3T1F822KUJtj4eJw4JbA1ryipdQU2DbLCwy9LS5I/ZTucSuxGQ==", "order"=>{"payment_method"=>"credit_card", "address_id"=>"2"}, "commit"=>"確認画面へ進む"}
+Unpermitted parameter: :address_id
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 82353ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2022-01-01 05:55:46 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (31.1ms)
+Started GET "/" for 60.112.126.23 at 2022-01-01 05:55:47 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 501ms (Views: 499.0ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 805ms (Views: 782.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 60.112.126.23 at 2022-01-01 05:55:48 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (3.4ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 134ms (Views: 131.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 05:55:51 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/orders_controller.rb:20: syntax error, unexpected ':', expecting end
+      render :new:
+                 ^
+/home/ec2-user/environment/nagano_cake/app/controllers/orders_controller.rb:30: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/orders_controller.rb:20: syntax error, unexpected ':', expecting end
+app/controllers/orders_controller.rb:30: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 60.112.126.23 at 2022-01-01 05:58:00 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 154ms (Views: 145.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 05:58:01 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:16
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:20
+  Rendered orders/new.html.erb within layouts/application (154.1ms)
+Completed 200 OK in 271ms (Views: 247.5ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 05:58:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GFG7fh14L0sgufThmu4Si0o3r1X9DO52Yr4pNCUE+F+BTnkQsJmmG1CWpWgdh0B7gE0Sg4XwRyd8rlUHaWq6Kw==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:14
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 25983ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 05:58:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GFG7fh14L0sgufThmu4Si0o3r1X9DO52Yr4pNCUE+F+BTnkQsJmmG1CWpWgdh0B7gE0Sg4XwRyd8rlUHaWq6Kw==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 39728ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:00:33 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GFG7fh14L0sgufThmu4Si0o3r1X9DO52Yr4pNCUE+F+BTnkQsJmmG1CWpWgdh0B7gE0Sg4XwRyd8rlUHaWq6Kw==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 14625ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 06:01:03 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:16
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:20
+  Rendered orders/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 119ms (Views: 116.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:01:07 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owg2TZym641z++uG9yg18LexQFUWrZ8rFYBgTUxSLGI6F/QjMUdi3QPUug9wQWcAfcv9g25RNnoLkBx+ADxuFg==", "order"=>{"payment_method"=>"transfer", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameter: :address_id
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:16
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:20
+  Rendered orders/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 26868ms (Views: 113.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:03:10 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NnflAsHMgx1xwqNZomlgAMbBqv/gpzzIo1zIGu2ehRWvaCdsbC0KTQHt8tAlADLwDLsXKZhblZm9TLQpofDHYQ==", "order"=>{"payment_method"=>"transfer", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:23:01 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/orders/confirm"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:23:08 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owg2TZym641z++uG9yg18LexQFUWrZ8rFYBgTUxSLGI6F/QjMUdi3QPUug9wQWcAfcv9g25RNnoLkBx+ADxuFg==", "order"=>{"payment_method"=>"transfer", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:14
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 2.7ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:24:47 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/controllers/orders_controller.rb:30: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/orders_controller.rb:30: syntax error, unexpected end, expecting end-of-input
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:25:42 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owg2TZym641z++uG9yg18LexQFUWrZ8rFYBgTUxSLGI6F/QjMUdi3QPUug9wQWcAfcv9g25RNnoLkBx+ADxuFg==", "order"=>{"payment_method"=>"transfer", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:14
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/orders/confirm.html.erb:37: syntax error, unexpected end-of-input, expecting end
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:28:36 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owg2TZym641z++uG9yg18LexQFUWrZ8rFYBgTUxSLGI6F/QjMUdi3QPUug9wQWcAfcv9g25RNnoLkBx+ADxuFg==", "order"=>{"payment_method"=>"transfer", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:14
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14:       <p>小計</p>
+    15:     </th>
+    16:   </tr>
+    17:   <% @cart_items.each do |cart_item| %>
+    18:   <tr>
+    19:     <tb>
+    20:       <%= cart_item.item.name %>
+  
+app/views/orders/confirm.html.erb:17:in `_app_views_orders_confirm_html_erb___748590752350712983_33257720'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:41:03 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owg2TZym641z++uG9yg18LexQFUWrZ8rFYBgTUxSLGI6F/QjMUdi3QPUug9wQWcAfcv9g25RNnoLkBx+ADxuFg==", "order"=>{"payment_method"=>"transfer", "select_address"=>"2", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:14
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 2.5ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for #<Customer:0x00000000062fc118>
+Did you mean?  cart_item
+               cart_item=):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started GET "/" for 60.112.126.23 at 2022-01-01 06:45:10 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 723ms (Views: 709.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 60.112.126.23 at 2022-01-01 06:45:11 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (4.2ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 136ms (Views: 134.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 06:45:17 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 213ms (Views: 197.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:45:23 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for #<Customer:0x00007f44dc454ed0>
+Did you mean?  cart_item
+               cart_item=):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:48:26 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for #<Customer:0x00000000056f6968>
+Did you mean?  cart_item
+               cart_item=):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:48:57 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `all' for #<CartItem:0x00007f16d04afbd0>):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:51:29 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 2.5ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for #<Customer:0x00000000046b9a50>
+Did you mean?  cart_item
+               cart_item=):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:52:34 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for #<Customer:0x00007fc6443d54e8>
+Did you mean?  cart_item
+               cart_item=):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:53:03 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `cart_items' for #<Customer:0x0000000004451d08>
+Did you mean?  cart_item
+               cart_item=):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:53:44 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.3ms)
+
+
+  
+NameError (uninitialized constant OrdersController::Cart_items):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:53:59 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HofowhpaZHLjekCoKAp5pA+KCmzmhMmwbdDgZxFXt9KHmCqst7vtIpNVESGvYytUxfC3up54YOFzwJxUXTn1pg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.3ms)
+
+
+  
+LoadError (Unable to autoload constant Cart_item, expected /home/ec2-user/environment/nagano_cake/app/models/cart_item.rb to define it):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started GET "/admin/items/new" for 60.112.126.23 at 2022-01-01 06:54:21 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/new.html.erb:38
+  Rendered admin/items/new.html.erb within layouts/application (73.5ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:48
+Completed 200 OK in 784ms (Views: 757.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/orders/new" for 60.112.126.23 at 2022-01-01 06:54:25 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:17
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/orders/new.html.erb:21
+  Rendered orders/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 120ms (Views: 118.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:54:31 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3iKI/ogxbNwbTcKZcY22KLsdhyHEwxVfPLGC9+ajY/JHPUqQJdDljGtikxD25OTYcWc697w/vA4iof7Eqs0hhg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+LoadError (Unable to autoload constant Cart_item, expected /home/ec2-user/environment/nagano_cake/app/models/cart_item.rb to define it):
+  
+app/controllers/orders_controller.rb:23:in `confirm'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:56:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3iKI/ogxbNwbTcKZcY22KLsdhyHEwxVfPLGC9+ajY/JHPUqQJdDljGtikxD25OTYcWc697w/vA4iof7Eqs0hhg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/orders/confirm.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  Rendered orders/confirm.html.erb within layouts/application (449.0ms)
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order' for #<#<Class:0x00007fc63d95aa28>:0x00007fc63d9587c8>
+Did you mean?  @order):
+    36:   <strong>
+    37:   支払い方法
+    38:   </strong>
+    39:   <%= order.payment_method %>
+    40: </p>
+    41: 
+    42: <p>
+  
+app/views/orders/confirm.html.erb:39:in `_app_views_orders_confirm_html_erb__1482665998444326233_70244706736540'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:56:39 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3iKI/ogxbNwbTcKZcY22KLsdhyHEwxVfPLGC9+ajY/JHPUqQJdDljGtikxD25OTYcWc697w/vA4iof7Eqs0hhg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.7ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/orders/confirm.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  Rendered orders/confirm.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 176ms (Views: 166.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:59:37 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/orders/confirm"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 06:59:44 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3iKI/ogxbNwbTcKZcY22KLsdhyHEwxVfPLGC9+ajY/JHPUqQJdDljGtikxD25OTYcWc697w/vA4iof7Eqs0hhg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/orders/confirm.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  Rendered orders/confirm.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 614ms (Views: 535.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/orders/confirm" for 60.112.126.23 at 2022-01-01 07:00:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3iKI/ogxbNwbTcKZcY22KLsdhyHEwxVfPLGC9+ajY/JHPUqQJdDljGtikxD25OTYcWc697w/vA4iof7Eqs0hhg==", "order"=>{"payment_method"=>"credit_card", "select_address"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+Unpermitted parameters: :select_address, :address_id
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/orders/confirm.html.erb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/orders/confirm.html.erb:20
+  Rendered orders/confirm.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 144ms (Views: 133.5ms | ActiveRecord: 0.5ms)
+
+
