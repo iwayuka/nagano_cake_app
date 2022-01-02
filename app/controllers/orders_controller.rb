@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 
+
   def new
     @order = Order.new
   end
@@ -44,6 +45,13 @@ class OrdersController < ApplicationController
       render :new
     end
   end
+
+  def thanks
+  end
+
+  def show
+  end
+
 
   private
     def order_params

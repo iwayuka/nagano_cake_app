@@ -39,9 +39,10 @@ resources :cart_items, only: [:index, :update, :destroy] do
   end
 end
 
-resources :orders, only: [:new, :create] do
+resources :orders do
   collection do
       post :confirm
+      get :thanks
   end
 end
 
