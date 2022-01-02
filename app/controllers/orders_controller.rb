@@ -1,5 +1,9 @@
 class OrdersController < ApplicationController
 
+  def index
+    @orders = current_customer.orders.all
+    @order_details = OrderDetail.all
+  end
 
   def new
     @order = Order.new
@@ -28,6 +32,7 @@ class OrdersController < ApplicationController
   def create
     cart_items = current_customer.cart_items.all
     @order = current_customer.orders.new(order_params)
+
     if @order.save
        cart_items.each do |cart|
         order_detail = OrderDetail.new

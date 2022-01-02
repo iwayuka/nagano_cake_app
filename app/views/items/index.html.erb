@@ -1,5 +1,5 @@
 <h2>商品一覧</h2><h4>(全X件)</h4>
-<% @cart_items.each do |cart_item| %>
+<% @items.each do |item| %>
 <%= attachment_image_tag item, :image %>
 <%= link_to item.name , item_path(item.id)  %>
 <%= item.price %>
