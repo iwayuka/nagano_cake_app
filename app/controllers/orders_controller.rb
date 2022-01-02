@@ -20,12 +20,33 @@ class OrdersController < ApplicationController
       render :new
     end
 
-    @cart_items = CartItem.all
+    @cart_items = current_customer.cart_items.all
 
+  end
+
+  def create
+    cart_items = current_customer.cart_items.all
+    @order = current_customer.orders.new(order_params)
+    if @order.save
+       cart_items.each do |cart|
+        order_detail = OrderDetail.new
+        order_detail.item_id = cart.item_id
+        order_detail.order_id = @order.id
+        order_detail.amount = cart.amount
+        order_detail.price = cart.item.price
+        order_detail.save
+      end
+      # きちんと動作するか一旦カートへ遷移。のちに「ありがとう」画面へ遷移するように変更
+      redirect_to cart_items_path
+      cart_items.destroy_all
+    else
+      @order = Order.new(order_params)
+      render :new
+    end
   end
 
   private
     def order_params
-      params.require(:order).permit(:payment_method, :postal_code, :address, :name)
+      params.require(:order).permit(:customer_id, :postal_code, :address, :name, :shipping_cost, :total_payment, :payment_method, :status)
     end
 end

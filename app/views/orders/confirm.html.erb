@@ -14,6 +14,7 @@
       <p>小計</p>
     </th>
   </tr>
+  <% @sum = 0 %>
   <% @cart_items.each do |cart_item| %>
   <tr>
     <td>
@@ -27,9 +28,34 @@
     </td>
     <td>
       <%= cart_item.subtotal%>
+      <% @sum += cart_item.subtotal %>
     </td>
   </tr>
   <% end %>
+</table>
+<table>
+  <tr>
+    <th>
+      <p>送料</p>
+    </th>
+    <td>800</td>
+  </tr>
+  <tr>
+    <th>
+      <p>商品合計</p>
+    </th>
+    <td><%= @sum %></td>
+  </tr>
+  <tr>
+    <th>
+      <p>
+        請求金額
+      </p>
+    </th>
+    <td>
+      <%= @sum += 800  %>
+    </td>
+  </tr>
 </table>
 
 <p>
@@ -48,3 +74,13 @@
 </p>
 
 
+<%= form_with model: @order, url: orders_path, local: true do |f| %>
+<%= f.hidden_field :customer_id, :value => current_customer.id %>
+<%= f.hidden_field :postal_code %>
+<%= f.hidden_field :address %>
+<%= f.hidden_field :name %>
+<%= f.hidden_field :shipping_cost, :value => 800 %>
+<%= f.hidden_field :total_price, :value => @sum %>
+<%= f.hidden_field :status, :value => Order.statuses.key(0) %>
+<%= f.submit "注文を確定する" %>
+<% end %>
