@@ -1,5 +1,7 @@
 class Admin::GenresController < ApplicationController
 
+  before_action :authenticate_admin!
+
 def index
   #ジャンル一覧を表示するための記述
   @genres = Genre.all
