@@ -1,17 +1,34 @@
+<!-- この画面でジャンルの一覧と新規追加を実行できるようにする -->
+
+<!-- タイトルの出力-->
 <div class="container">
   <div class="mb-3 row">
     <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
       <h4 class="px-3 my-3 bg-secondary text-white" >ジャンル一覧・追加</h4>
     </div>
   </div>
+  
+<!-- ジャンルの項目を新規追加できるformの記述 -->
+<!--現状、ケーキ、プリン、焼き菓子、キャンディの4ジャンルがある -->
+  <%= form_with model:@genre, url:'/admin/genres', local:true do |f| %>
+  <div class="mb-3 row">
+    <div class="col form-inline" >
+      <div class="mx-4 form-group">
+          <p></p><strong>ジャンル名</strong></p>
+        </div>
+        <div class="mx-4 form-group">
+          <%= f.text_field :name, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit '新規登録', class:"px-4 py-2 mx-4 btn btn-success" %>
+        </div>
+      </form>
+    </div>
+  </div>
+  <% end %>
 
-<p></p><strong>ジャンル名</strong></p>
-<%= form_with model:@genre, url:'/admin/genres', local:true do |f| %>
-<%= f.text_field :name, class:"form-control" %>
-<%= f.submit '新規登録', class:"px-4 py-2 mx-4 btn btn-success" %>
-<% end %>
-
-<div class="row">
+<!-- ジャンル一覧をテーブルにて出力 -->
+  <div class="row">
     <div class="col-lg-4">
       <table class="table">
         <tr class="table-light">

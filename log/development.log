@@ -24884,3 +24884,214 @@ Processing by Admin::GenresController#index as HTML
 Completed 200 OK in 111ms (Views: 107.9ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/admin/genres/1/edit" for 60.112.126.23 at 2022-01-03 14:46:10 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:24
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 664ms (Views: 621.4ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/admin/genres/1" for 60.112.126.23 at 2022-01-03 14:46:14 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ui4B0C2TbcqYLct13KwRVKLMwiD+6ZQJV/jUSfvhgiLaqpIRDGhar22C5ITpXy0ff1QM35UBZmnQGGV+aH/swQ==", "genre"=>{"name"=>"ケーキ(test)"}, "commit"=>"変更の保存", "id"=>"1"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:31
+  [1m[36mGenre Update (3.5ms)[0m  [1m[33mUPDATE "genres" SET "name" = ?, "updated_at" = ? WHERE "genres"."id" = ?[0m  [["name", "ケーキ(test)"], ["updated_at", "2022-01-03 14:46:14.027131"], ["id", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:31
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:31
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/admin/genres
+Completed 302 Found in 21ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2022-01-03 14:46:14 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:21
+  Rendered admin/genres/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 125ms (Views: 121.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/genres/1/edit" for 60.112.126.23 at 2022-01-03 14:46:15 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:24
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 113ms (Views: 107.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/genres/1" for 60.112.126.23 at 2022-01-03 14:46:19 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tEDFM9CjNIjWN8kmml6/m8mJr0Nz6pI7vzZEGFW6DrjUxFby8VgD7SOY5tevrYPQFBFhvBgCYFs41vUvxiRgWw==", "genre"=>{"name"=>"ケーキ"}, "commit"=>"変更の保存", "id"=>"1"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:31
+  [1m[36mGenre Update (1.7ms)[0m  [1m[33mUPDATE "genres" SET "name" = ?, "updated_at" = ? WHERE "genres"."id" = ?[0m  [["name", "ケーキ"], ["updated_at", "2022-01-03 14:46:19.518909"], ["id", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:31
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:31
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/admin/genres
+Completed 302 Found in 17ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2022-01-03 14:46:19 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:21
+  Rendered admin/genres/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 120ms (Views: 117.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2022-01-03 14:53:54 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:39
+  Rendered admin/genres/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 671ms (Views: 631.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2022-01-03 14:53:57 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:39
+  Rendered admin/genres/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 113ms (Views: 108.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/genres/1/edit" for 60.112.126.23 at 2022-01-03 14:54:46 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:24
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 130ms (Views: 124.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2022-01-03 14:55:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:38
+  Rendered admin/genres/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 125ms (Views: 120.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/genres/1/edit" for 60.112.126.23 at 2022-01-03 14:55:22 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:24
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 126ms (Views: 121.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/genres/1/edit" for 60.112.126.23 at 2022-01-03 14:55:50 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:24
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 147ms (Views: 139.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/genres" for 60.112.126.23 at 2022-01-03 14:57:18 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tv+ElhgRNEI195ORzCH8Db9BpMRhOzhnnBuO2Aae4QlTQ7d0jnoHDYA8Uyvrp+2+YzCwCBIDh0KoLNjOkvLofw==", "genre"=>{"name"=>"焼き菓子"}, "commit"=>"新規登録"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):1
+  [1m[36mGenre Create (2.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "焼き菓子"], ["created_at", "2022-01-03 14:57:27.900188"], ["updated_at", "2022-01-03 14:57:27.900188"]]
+  ↳ (pry):1
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:18
+Redirected to https://ebdd5fa694964d488ce9ab3f8128bdeb.vfs.cloud9.us-east-1.amazonaws.com/admin/genres
+Completed 302 Found in 14486ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2022-01-03 14:57:33 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:38
+  Rendered admin/genres/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 574ms (Views: 570.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/genres" for 60.112.126.23 at 2022-01-03 14:57:42 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:38
+  Rendered admin/genres/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 150ms (Views: 127.5ms | ActiveRecord: 1.5ms)
+
+
