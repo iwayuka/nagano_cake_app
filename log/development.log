@@ -26314,3 +26314,55 @@ Started GET "/attachments/d7c1d36eab3e58c443269ca5e4eb1d16127abfe9/store/294da9e
 Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Refile::App: [2022-01-03 16:04:19 +0000] GET "/d7c1d36eab3e58c443269ca5e4eb1d16127abfe9/store/294da9e3f09345763e740fdb01f89753023e0a8ccf738a790ce0acd4319f/image" 200 8.3ms
 
+Started GET "/" for 60.112.126.23 at 2022-01-03 16:08:48 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."created_at" DESC[0m
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 639ms (Views: 620.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 60.112.126.23 at 2022-01-03 16:09:17 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/homes_controller.rb:5:in `top'
+Started GET "/" for 60.112.126.23 at 2022-01-03 16:09:30 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 147ms (Views: 140.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items" for 60.112.126.23 at 2022-01-03 16:09:34 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 137ms (Views: 134.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.126.23 at 2022-01-03 16:09:52 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/homes/top.html.erb:16
+  Rendered homes/top.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 228ms (Views: 220.2ms | ActiveRecord: 0.9ms)
+
+
