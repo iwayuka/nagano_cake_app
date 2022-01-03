@@ -1,24 +1,46 @@
-<p><strong>ジャンル検索</strong></p>
-
+<!-- トップ画面 -->
+<div class="container">
+  <div class="my-5 row">
+    <div class="col-lg-2" style="background-color: orange;">
+      <p><strong>ジャンル検索</strong></p>
+    </div>
+    <div class="col-lg-9">
 <!-- ホーム画面中央部にメイン画像とメインコメントを実装 -->
-<div class="main-visual">
-  <div class="main-visual-content">
-    <p class="main-visual-text">
-      ようこそ、ながのCAKEへ！ </br>
-      このサイトは、ケーキ販売のECサイトになります。</br>
-      会員でない方も商品の閲覧ができますが、</br>
-      購入には会員登録が必要になります
-    </p>
+      <div class="main-visual">
+        <div class="main-visual-content">
+          <h5 class="main-visual-text">
+            ようこそ、ながのCAKEへ！ </br>
+            このサイトは、ケーキ販売のECサイトになります。</br>
+            会員でない方も商品の閲覧ができますが、</br>
+            購入には会員登録が必要になります
+          </h5>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-lg-2" style="background-color: orange;"></div>
+    <div class="col">
+      <h2><strong>新着商品</strong></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2" style="background-color: orange;"></div>
+    <% @items.each do |item| %>
+    <div class="mr-3 col-lg-2">
+      <%= attachment_image_tag item, :image, :fill, 200, 150, format: 'jpeg', class:"exmaple-hoge" %>
+      <p><strong><%= item.name %></strong></p>
+      <span>¥</span><%= item.price.to_s(:delimited) %></td>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-lg-2" style="background-color: orange;"></div>
+    <div class="col-lg-9">
+      <div class="text-right">
+      <%= link_to "全ての商品を見る＞", items_path %>
+      </div>
+    </div>
+  </div>
 
-<h2>新着商品</h2>
-<% @items.each do |item| %>
-<div><%= attachment_image_tag item, :image, :fill, 150, 100, format: 'jpeg', class:"exmaple-hoge" %>
-<p><strong><%= item.name %></strong></p>
-<span>¥</span><%= item.price.to_s(:delimited) %></td>
-</div>
-<% end %>
-  
 
-<%= link_to "全ての商品を見る＞", items_path %>
