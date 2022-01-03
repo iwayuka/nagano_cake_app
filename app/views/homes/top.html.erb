@@ -14,7 +14,11 @@
 
 <h2>新着商品</h2>
 <% @items.each do |item| %>
-<%= attachment_image_tag item, :image %>
-<%= item.name %>
-<span>¥</span><%= item.price.to_s(:delimited) %>
+<div><%= attachment_image_tag item, :image, :fill, 150, 100, format: 'jpeg', class:"exmaple-hoge" %>
+<p><strong><%= item.name %></strong></p>
+<span>¥</span><%= item.price.to_s(:delimited) %></td>
+</div>
 <% end %>
+  
+
+<%= link_to "全ての商品を見る＞", items_path %>
