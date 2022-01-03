@@ -11,6 +11,6 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.integer :status
 
       t.timestamps
-    e nd
+    end
   end
 end

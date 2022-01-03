@@ -1,8 +1,8 @@
 class Admin::GenresController < ApplicationController
 
 def index
+  #ジャンル一覧を表示するための記述
   @genres = Genre.all
-
   # Viewへ渡すためのインスタンス変数にからのモデルオブジェクトを生成する。
   @genre = Genre.new
 

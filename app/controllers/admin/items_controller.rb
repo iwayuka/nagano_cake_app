@@ -22,7 +22,7 @@ class Admin::ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def edit
+  def editcd
     @item = Item.find(params[:id])
   end
 
@@ -39,7 +39,7 @@ class Admin::ItemsController < ApplicationController
   private
   # ストロングパラメータ
   def item_params
-  params.require(:item).permit(:genre_id, :name, :image_id, :introduction, :price, :is_active)
+  params.require(:item).permit(:genre_id, :name, :image, :introduction, :price, :is_active)
 end
 
 end
