@@ -9,7 +9,7 @@ class Admin::ItemsController < ApplicationController
   def create
     # １. データを新規登録するためのインスタンス作成
     item = Item.new(item_params)
-    binding.pry
+
     # ２. データをデータベースに保存するためのsaveメソッド実行
     item.save
     # ３. 商品詳細画面へリダイレクト ※データの保存がうまくできるか確認のため、一度一覧画面へリダイレクト
@@ -25,7 +25,7 @@ class Admin::ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def editcd
+  def edit
     @item = Item.find(params[:id])
   end
 
