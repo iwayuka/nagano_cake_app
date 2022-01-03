@@ -1,1 +1,76 @@
-hoge
+<p><strong>注文情報</strong></p>
+<table>
+  <tr>
+    <td>
+      <p>注文日</p>
+    </td>
+    <td>
+      <%= @order.created_at.strftime("%Y/%m/%d") %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>配送先</p>
+    </td>
+    <td>
+      <p>〒<%= @order.postal_code %></p>
+      <%= @order.address %>
+      <%= @order.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>支払方法</p>
+    </td>
+    <td>
+      <%= @order.payment_method_i18n %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>ステータス</p>
+    </td>
+    <td>
+      <%= @order.status_i18n %>
+    </td>
+  </tr>
+</table>
+
+
+<p><strong>注文内容</strong></p>
+<table>
+  <tr>
+    <th><p>商品名</p></th>
+    <th><p>単価(税込)</p></th>
+    <th><p>個数</p></th>
+    <th><p>小計</p></th>
+  </tr>
+  <% @sum = 0 %>
+  <% @order_details.each do |order_detail| %>
+  <tr>
+    <td><%= order_detail.item.name %></td>
+    <td><%= order_detail.with_tax_price %></td>
+    <td><%= order_detail.amount %></td>
+    <td><%= order_detail.subtotal %></td>
+    <% @sum += order_detail.subtotal %>
+  </tr>
+
+  <% end %>
+
+</table>
+
+<p><strong>請求情報</strong></p>
+<table>
+  <tr>
+    <td><p>商品合計</p></td>
+    <td><%= @order.total_payment %></td>
+  </tr>
+  <tr>
+    <td><p>配送料</p></td>
+    <td>800</td>
+  </tr>
+  <tr>
+    <td><p><strong>ご請求額</strong></p></td>
+    <td><%= @order.total_payment %></td>
+  </tr>
+</table>

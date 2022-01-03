@@ -55,6 +55,9 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:id])
+    @order_detail = OrderDetail.find_by(order_id: params[:id])
+    @order_details = @order.order_details.page(params[:page]).reverse_order
   end
 
 
