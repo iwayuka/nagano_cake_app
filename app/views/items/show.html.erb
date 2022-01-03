@@ -1,3 +1,4 @@
+<%= attachment_image_tag @item, :image, :fill, 350, 200, format: 'jpeg', class:"exmaple-hoge" %>
 <h4><%= @item.name %></h4>
 <p><strong><%= @item.introduction %></strong></p>
 <span><strong>¥<%= @item.price.to_s(:delimited) %></strong></span><span>(税込)</span>
