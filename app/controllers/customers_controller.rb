@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   
-  before_action :authenticate_admin!
+  before_action :authenticate_customer!
 
   def mypage
     @customer = Customer.find(current_customer.id)
