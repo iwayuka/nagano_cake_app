@@ -1,4 +1,6 @@
 class CartItemsController < ApplicationController
+  
+  before_action :authenticate_admin!
 
   def index
     @cart_items = CartItem.all
