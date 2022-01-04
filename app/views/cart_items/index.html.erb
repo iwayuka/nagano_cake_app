@@ -1,44 +1,73 @@
-<h4>ショッピングカート</h4>
+<!-- ショッピングカート画面 -->
+<div class="container">
+  <div class="my-3 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 mb-3 bg-secondary text-white">ショッピングカート</h4>
+    </div>
+    <div class="col-lg-7 d-flex justify-content-end">
+      <%= button_to "カートを空にする", destroy_all_cart_items_path, method: :delete, class: "btn btn-danger btn-block" %>
+    </div>
+  </div>
 
-<%= button_to "カートを空にする", destroy_all_cart_items_path, method: :delete %>
+  <div class="row">
+    <div class="col-lg-11">
+      <table class="table table-bordered border-dark">
+        <tr class="table-active">
+          <th scope="col" style="width: 44%">商品名</th>
+          <th scope="col" style="width: 14%">単価(税込)</th>
+          <th scope="col" style="width: 14%">数量</th>
+          <th scope="col" style="width: 14%">小計</th>
+          <th scope="col" style="width: 14%"></th>
+        </tr>
+        <% @sum = 0 %>
+        <% @cart_items.each do |cart_item| %>
+        <tr>
+          <td>
+            <%= attachment_image_tag cart_item.item, :image, :fill, 125, 75, format: 'jpeg', class:"mx-2 exmaple-hoge" %>
+            <%= cart_item.item.name %>
+          </td>
+          <td class="align-middle">
+            <%= cart_item.item.with_tax_price.to_s(:delimited) %>
+          </td>
+          <td class="align-middle">
+            <%= form_with model:cart_item, url:"/cart_items/#{cart_item.id}", local:true do |f| %>
+            <%= f.select :amount, *[1..5] %>
+            <%= f.submit '変更', method: :patch, class: "btn btn-success" %>
+            <% end %>
+          </td>
+          <td class="align-middle">
+            <%= cart_item.subtotal.to_s(:delimited) %>
+            <% @sum += cart_item.subtotal %>
+          </td>
+          <td class="align-middle">
+            <%= link_to "削除する", cart_item_path(cart_item.id), method: :delete, class: "btn btn-danger" %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+  
+  <div class="mt-2 row">
+    <div class="col-lg-4">
+      <%= link_to "買い物を続ける", items_path, class: "px-4 py-2 ml-5 btn btn-primary" %>
+    </div>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-3 d-flex justify-content-end">
+      <table class="table table-bordered border-dark">
+        <tr>
+          <th class="table-active" scope="col" style="width: 14%">合計金額</th>
+          <th scope="col" style="width: 14%"><%= @sum.to_s(:delimited) %></th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  <div class="mt-5 row">
+    <div class="col-lg-11 d-flex justify-content-center">
+      <%= link_to "情報入力に進む", new_order_path, class: "px-4 py-2 mx-4 btn btn-success" %>
+    </div>
+  </div>
+</div>  
+ 
 
-<table>
-  <tr>
-　  <th>商品名</th>
-    <th>単価(税込)</th>
-    <th>数量</th>
-    <th>小計</th>
-  </tr>
-  <% @sum = 0 %>
-  <% @cart_items.each do |cart_item| %>
-
-  <tr>
-    <td>
-      <%= cart_item.item.name %>
-    </td>
-    <td>
-      <%= cart_item.item.with_tax_price.to_s(:delimited) %>
-    </td>
-    <td>
-      <%= form_with model:cart_item, url:"/cart_items/#{cart_item.id}", local:true do |f| %>
-      <%= f.select :amount, *[1..5] %>
-      <%= f.submit '変更', method: :patch, class: "px-4 py-2 mx-4 btn btn-success" %>
-      <% end %>
-    </td>
-    <td>
-      <%= cart_item.subtotal%>
-      <% @sum += cart_item.subtotal %>
-
-    </td>
-    <td>
-      <%= link_to "削除する", cart_item_path(cart_item.id), method: :delete %>
-    </td>
-　</tr>
-
-
-
-<% end %>
-</table>
-合計金額 <%= @sum %>
-
-<%= link_to "情報入力に進む", new_order_path, class: "px-4 py-2 mx-4 btn btn-success" %>
