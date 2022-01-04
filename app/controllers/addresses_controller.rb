@@ -1,9 +1,9 @@
 class AddressesController < ApplicationController
-  
+
   before_action :authenticate_customer!
 
   def index
-    @addresses = Address.all
+    @addresses = current_customer.addresses.all
     @address = Address.new
 
   end
@@ -38,7 +38,7 @@ class AddressesController < ApplicationController
   private
   # ストロングパラメータ
   def address_params
-  params.require(:address).permit(:name, :postal_code, :address)
+  params.require(:address).permit(:customer_id, :name, :postal_code, :address)
 end
 
 end
