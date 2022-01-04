@@ -1,6 +1,23 @@
-<h2>商品一覧</h2><h4>(全X件)</h4>
-<% @items.each do |item| %>
-<%= attachment_image_tag item, :image, :fill, 150, 100, format: 'jpeg', class:"exmaple-hoge" %>
-<%= link_to item.name , item_path(item.id)  %>
-<%= item.price %>
-<% end %>
+<!-- トップ画面 -->
+<div class="container">
+  <div class="my-5 row">
+    <div class="col-lg-2" style="background-color: orange;">
+      <p><strong>ジャンル検索</strong></p>
+    </div>
+    <div class="col-lg-10 ">
+      <div class="mb-2 d-flex align-items-end">
+        <h2>商品一覧</h2><h4>(全<%= @items_count.count %>件)</h4>
+      </div>
+      <div class="d-flex flex-wrap">
+        <% @items.each do |item| %>
+        <div class="mb-1 p-1">
+          <%= attachment_image_tag item, :image, :fill, 200, 150, format: 'jpeg', class:"exmaple-hoge" %>
+          <p><strong><%= link_to item.name, item_path(item.id) %></strong></p>
+          <span>¥</span><%= item.price.to_s(:delimited) %></td>
+        </div>
+        <% end %>
+      </div>
+      <div class="d-flex justify-content-center"><%= paginate @items %></div>
+    </div>
+  </div>
+</div>
