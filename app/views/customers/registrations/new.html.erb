@@ -1,59 +1,135 @@
-<h4>新規会員登録</h4>
+<!-- 新規会員登録画面 -->
+<div class="container">
+  <div class="my-5 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 mb-3 bg-secondary text-white">新規会員登録</h4>
+    </div>
+  </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <!-- 会員情報を登録するためのform -->
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "customers/shared/error_messages", resource: resource %>
+  <form>
 
-  <div class="field">
-    <%= f.label :名前 %>
-    <span>(姓)</span>
-    <%= f.text_field :last_name, autofocus: true, placeholder: "令和" %>
-    <span>(名)</span>
-    <%= f.text_field :first_name, autofocus: true, placeholder: "道子" %>
+    <!-- 氏名を入力するフォーム -->
+    <div class="form-group row">
+      <%= f.label :名前, class:"col-lg-2 col-form-label" %>
+      <div class="pl-4 col-lg-1">
+        <span>(姓)</span>
+      </div>
+      <div class="col-lg-3">
+        <%= f.text_field :last_name, autofocus: true, placeholder: "令和", class:"form-control" %>
+      </div>
+      <div class="pl-4 col-lg-1">
+        <span>(名)</span>
+      </div>
+      <div class="col-lg-3">
+        <%= f.text_field :first_name, autofocus: true, placeholder: "道子", class:"form-control" %>
+      </div>
+      <div class="col-lg-2" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上 -->
+
+    <!-- シメイを入力するフォーム -->
+    <div class="form-group row">
+      <%= f.label :フリガナ, class:"col-lg-2 col-form-label" %>
+      <div class="pl-4 col-lg-1">
+        <span>(セイ)</span>
+      </div>
+      <div class="col-lg-3">
+        <%= f.text_field :last_name_kana, autofocus: true, placeholder: "レイワ", class:"form-control" %>
+      </div>
+      <div class="pl-4 col-lg-1">
+        <span>(メイ)</span>
+      </div>
+      <div class="col-lg-3">
+        <%= f.text_field :first_name_kana, autofocus: true, placeholder: "ミチコ", class:"form-control" %>
+      </div>
+      <div class="col-lg-2" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上 -->
+
+    <!-- メールアドレスを入力するフォーム -->
+    <div class="form-group row">
+      <%= f.label :メールアドレス, class:"col-lg-3 col-form-label" %>
+      <div class="col-lg-3">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@example.com", class:"form-control" %>
+      </div>
+      <div class="col-lg-6" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上-->
+
+    <!-- 郵便番号（ハイフンなし）を入力するフォーム -->
+    <div class="form-group row">
+      <%= f.label :"郵便番号(ハイフンなし)", class:"col-lg-3 col-form-label" %>
+      <div class="col-lg-3">
+        <%= f.text_field :postal_code, autofocus: true, placeholder: "0000000", class:"form-control" %>
+      </div>
+      <div class="col-lg-6" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上-->
+
+    <!-- 住所を入力するフォーム -->
+    <div class="form-group row">
+      <%= f.label :住所, class:"col-lg-3 col-form-label" %>
+      <div class="col-lg-7">
+        <%= f.text_field :address, autofocus: true, placeholder: "東京都渋谷区代々木神園町0-0", class:"form-control" %>
+      </div>
+      <div class="col-lg-2" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上-->
+
+    <!-- 電話番号を入力する -->
+    <div class="form-group row">
+      <%= f.label :"電話番号(ハイフンなし)", class:"col-lg-3 col-form-label" %>
+      <div class="col-lg-3">
+        <%= f.text_field :telephone_number, autofocus: true, placeholder: "0000000000", class:"form-control" %>
+      </div>
+      <div class="col-lg-6" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上-->
+
+    <!-- パスワードを入力するフォーム -->
+    <div class="form-group row">
+      <%= f.label :"パスワード(6文字以上)", class:"col-lg-3 col-form-label" %>
+      <div class="col-lg-3">
+        <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+      </div>
+      <div class="col-lg-6" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上-->
+
+    <!-- パスワード確認用フォーム -->
+    <div class="form-group row">
+      <%= f.label :"パスワード(確認用)", class:"col-lg-3 col-form-label" %>
+      <div class="col-lg-3">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+      </div>
+      <div class="col-lg-6" style="background-color: orange;"></div>
+    </div>
+    <!-- 以上-->
+    
+    <!-- 「新規登録」ボタン -->
+    <div class="actions row">
+      <div class="col-lg-3" style="background-color: orange;"></div>
+      <div class="col-lg-3">
+        <%= f.submit "新規登録", class: "btn btn-success btn-block" %>
+      </div>
+    </div>
+    <!-- 以上 -->
+  </form>
+  <% end %> 
+  
+  <div class="row">
+    <div class="px-4 mt-4 ml-4 col-lg-3">
+      <h5 class="bg-secondary text-white d-flex justify-content-center">既に登録済みの方</h5>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :フリガナ %>
-    <span>(セイ)</span>
-    <%= f.text_field :last_name_kana, autofocus: true, placeholder: "レイワ" %>
-    <span>(メイ)</span>
-    <%= f.text_field :first_name_kana, autofocus: true, placeholder: "ミチコ" %>
+  <div class="row">
+    <div class="col-lg-1" style="background-color: orange;"></div>
+    <div class="col-lg-5">
+     <%= link_to  "こちら", new_customer_session_path  %>  からログインしてください。
+    </div>
   </div>
-
-
-  <div class="field">
-    <%= f.label :メールアドレス %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@example.com" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"郵便番号(ハイフンなし)" %>
-    <%= f.text_field :postal_code, autofocus: true, placeholder: "0000000" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :住所 %>
-    <%= f.text_field :address, autofocus: true, placeholder: "東京都渋谷区代々木神園町0-0" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"電話番号(ハイフンなし)" %>
-    <%= f.text_field :telephone_number, autofocus: true, placeholder: "0000000000" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"パスワード(6以上)" %>
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :確認用 %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "新規登録" %>
-  </div>
-<% end %>
-
-<h6>既に登録済みの方</h6>
-<%= link_to  "こちら", new_customer_session_path  %>からログインしてください。
+</div>
+<!-- 以上 -->
