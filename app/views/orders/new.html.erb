@@ -1,33 +1,76 @@
-<h4>注文情報入力</h4>
+<!-- 注文情報入力画面 -->
+<div class="container">
+  <div class="my-5 row">
+    <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
+      <h4 class="px-3 bg-secondary text-white">注文情報入力</h4>
+    </div>
+  </div>
+  <!-- 会員情報を登録するためのform -->
+  <%= form_with model:@order, url: confirm_orders_path, local:true do |f| %>
+  <form>
 
-<%= form_with model:@order, url: confirm_orders_path, local:true do |f| %>
+    <!-- 氏名を入力するフォーム -->
+    <div class="form-group row">
+      <div class="col">
+        <h5>
+          <strong>
+            <%= f.label :支払方法, class:"col-form-label" %>
+          </strong>
+        </h5>
+        <div class="pl-4">
+          <%= f.radio_button :payment_method, Order.payment_methods.key(0) %>
+          <%= f.label :payment_method, Order.payment_methods_i18n[:credit_card] %>
+          <br />
+          <%= f.radio_button :payment_method, Order.payment_methods.key(1) %>
+          <%= f.label :payment_method, Order.payment_methods_i18n[:transfer]%>
+        </div>
+        <h5>
+          <strong>
+            <%= f.label :お届け先, class:"mt-2 col-form-label" %>
+          </strong>
+        </h5>
+        <div class="pl-4">
+          <%= f.radio_button :select_address, '1' %>
+          <%= f.label :select_address_1, "ご自身の住所" %>
+        </div>
+        <div class="mb-2 pl-5">
+          <span>〒</span><%= current_customer.postal_code %> <%= current_customer.address %><br />
+          <%= current_customer.first_name %><%= current_customer.last_name %>
+        </div>
+        <div class="pl-4">
+          <%= f.radio_button :select_address, '2' %>
+          <%= f.label :select_address_2, "登録済住所から選択" %>
+        </div>
+        <div class="mb-2 pl-5">
+          <%= f.select :address_id, options_from_collection_for_select(Address.all, :id, :full_address), class:"mt-3 ml-5 custom-select" %>
+        </div>
+        <div class="pl-4">
+          <%= f.radio_button :select_address, '3' %>
+          <%= f.label :select_address_3, "新しいお届け先" %>
+        </div>
+        <div class="mb-2 pl-5">
+          <%= f.label :"郵便番号(ハイフンなし)", class:"col-lg-3 col-form-label" %>
+          <%= f.text_field :postal_code, placeholder: "0000000", class:"col-lg-3 col-form" %>
+        </div>
+        <div class="mb-2 pl-5">
+          <%= f.label :address, "住所", class:"col-lg-3 col-form-label" %>
+          <%= f.text_field :address, placeholder: "東京都渋谷区代々木神園町0-0", class:"col-lg-6 col-form" %>
+        </div>
+        <div class="mb-2 pl-5">
+          <%= f.label :name, "宛名", class:"col-lg-3 col-form-label" %>
+          <%= f.text_field :name, placeholder: "0000000", class:"col-lg-3 col-form" %>
+        </div>
+      </div>
+    </div>
+    <!-- 以上-->
 
-<br />
-
-<strong>支払方法</strong><br />
-<%= f.radio_button :payment_method, Order.payment_methods.key(0) %>
-<%= f.label :payment_method, Order.payment_methods_i18n[:credit_card] %>
-<br />
-<%= f.radio_button :payment_method, Order.payment_methods.key(1) %>
-<%= f.label :payment_method, Order.payment_methods_i18n[:transfer]%>
-<br />
-<strong>お届け先</strong><br />
-<%= f.radio_button :select_address, '1' %>
-  <%= f.label :select_address_1, "ご自身の住所" %>
-  <%= current_customer.address %>
-<br />
-<%= f.radio_button :select_address, '2' %>
-  <%= f.label :select_address_2, "登録済住所から選択" %>
-  <%= f.select :address_id, options_from_collection_for_select(Address.all, :id, :full_address) %>
-<br />
-<%= f.radio_button :select_address, '3' %>
-  <%= f.label :select_address_3, "新しいお届け先" %>
-  <%= f.label :postal_code, "郵便番号(ハイフンなし)" %>
-  <%= f.text_field :postal_code %>
-  <%= f.label :address, "住所" %>
-  <%= f.text_field :address %>
-  <%= f.label :name, "宛名" %>
-  <%= f.text_field :name %>
-<!-- 選んでもらったデータを送ります -->
-  <%= f.submit "確認画面へ進む" %>
-<% end %>
+    <!-- 「ログイン」ボタン -->
+    <div class="actions row">
+      <div class="col-lg-4"></div>
+      <div class="mt-3 col-lg-2">
+        <%= f.submit "確認画面へ進む", class: "btn btn-primary btn-block" %>
+      </div>
+    </div>
+    <% end %>
+  </form>
+</div>
