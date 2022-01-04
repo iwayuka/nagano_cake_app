@@ -1,6 +1,6 @@
 <!-- 注文情報入力画面 -->
 <div class="container">
-  <div class="my-5 row">
+  <div class="mt-5 row">
     <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
       <h4 class="px-3 bg-secondary text-white">注文情報入力</h4>
     </div>
@@ -17,7 +17,7 @@
             <%= f.label :支払方法, class:"col-form-label" %>
           </strong>
         </h5>
-        <div class="pl-4">
+        <div class="pl-4 lead">
           <%= f.radio_button :payment_method, Order.payment_methods.key(0) %>
           <%= f.label :payment_method, Order.payment_methods_i18n[:credit_card] %>
           <br />
@@ -29,7 +29,7 @@
             <%= f.label :お届け先, class:"mt-2 col-form-label" %>
           </strong>
         </h5>
-        <div class="pl-4">
+        <div class="pl-4 lead">
           <%= f.radio_button :select_address, '1' %>
           <%= f.label :select_address_1, "ご自身の住所" %>
         </div>
@@ -37,14 +37,14 @@
           <span>〒</span><%= current_customer.postal_code %> <%= current_customer.address %><br />
           <%= current_customer.first_name %><%= current_customer.last_name %>
         </div>
-        <div class="pl-4">
+        <div class="pl-4 lead">
           <%= f.radio_button :select_address, '2' %>
           <%= f.label :select_address_2, "登録済住所から選択" %>
         </div>
         <div class="mb-2 pl-5">
           <%= f.select :address_id, options_from_collection_for_select(Address.all, :id, :full_address), class:"mt-3 ml-5 custom-select" %>
         </div>
-        <div class="pl-4">
+        <div class="pl-4 lead">
           <%= f.radio_button :select_address, '3' %>
           <%= f.label :select_address_3, "新しいお届け先" %>
         </div>
