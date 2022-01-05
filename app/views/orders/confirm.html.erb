@@ -89,6 +89,7 @@
 <%= f.hidden_field :name %>
 <%= f.hidden_field :shipping_cost, :value => 800 %>
 <%= f.hidden_field :total_payment, :value => @sum %>
+<%= f.hidden_field :payment_method%>
 <%= f.hidden_field :status, :value => Order.statuses.key(0) %>
 
   <div class="mt-5 row">
