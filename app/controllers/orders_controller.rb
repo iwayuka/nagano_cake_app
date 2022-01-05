@@ -45,7 +45,7 @@ class OrdersController < ApplicationController
         order_detail.save
       end
       # きちんと動作するか一旦カートへ遷移。のちに「ありがとう」画面へ遷移するように変更
-      redirect_to cart_items_path
+      redirect_to thanks_orders_path
       cart_items.destroy_all
     else
       @order = Order.new(order_params)
