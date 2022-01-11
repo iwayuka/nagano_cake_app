@@ -12,13 +12,13 @@ class Admin::ItemsController < ApplicationController
 
     # ２. データをデータベースに保存するためのsaveメソッド実行
     item.save
-    # ３. 商品詳細画面へリダイレクト ※データの保存がうまくできるか確認のため、一度一覧画面へリダイレクト
-    redirect_to admin_items_path
+    # ３. 商品詳細画面へリダイレクト
+    redirect_to admin_item_path(item.id)
   end
 
   def index
     # itemデータベースから情報を取得
-    @items = Item.all
+    @items = Item.all.page(params[:page]).per(10)
   end
 
   def show

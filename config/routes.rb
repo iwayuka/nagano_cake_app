@@ -51,7 +51,7 @@ namespace :admin do
     resources :items
     resources :customers
     root :to => 'homes#top'
-    resources :order, only: [:show]
+    resources :orders
   end
 
 end

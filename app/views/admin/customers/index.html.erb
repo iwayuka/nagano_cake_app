@@ -22,7 +22,9 @@
             <%= customer.id %>
           </td>
           <td><!-- 氏名に会員詳細画面へのリンクを記述 -->
-            <%= link_to customer.last_name, admin_customer_path(customer.id), class:"link-dark" %>
+            <%= link_to admin_customer_path(customer.id) do %>
+              <%= customer.last_name %><%= customer.first_name %>
+            <% end %>
           </td>
           <td>
             <%= customer.email %>
@@ -33,6 +35,9 @@
         </tr>
         <% end %>
       </table>
+    </div>
+    <div class="d-flex justify-content-center">
+      <%= paginate @customers %>
     </div>
   </div>
 </div>
