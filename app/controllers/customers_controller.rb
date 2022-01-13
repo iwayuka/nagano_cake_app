@@ -34,6 +34,8 @@ class CustomersController < ApplicationController
   end
 
 
+
+
 private
 # ストロングパラメータ
 def customer_params
