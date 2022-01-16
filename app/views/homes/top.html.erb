@@ -3,7 +3,7 @@
   <div class="my-5 row">
 
     <!-- サブコンテンツにジャンル検索ができるようにする -->
-    <div class="col-lg-2" style="background-color: orange;">
+    <div class="col-lg-2">
       <p><strong>ジャンル検索</strong></p>
     </div>
     <!-- 以上 -->
@@ -26,13 +26,13 @@
 
   <!-- 新着商品情報４件を表示させる -->
   <div class="row">
-    <div class="col-lg-2" style="background-color: orange;"></div>
+    <div class="col-lg-2"></div>
     <div class="col">
       <h2><strong>新着商品</strong></h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-2" style="background-color: orange;"></div>
+    <div class="col-lg-2"></div>
     <% @items.each do |item| %>
     <div class="mr-3 col-lg-2">
       <%= link_to item_path(item.id) do %>
@@ -44,7 +44,7 @@
     <% end %>
   </div>
   <div class="row">
-    <div class="col-lg-2" style="background-color: orange;"></div>
+    <div class="col-lg-2"></div>
     <div class="col-lg-9">
       <div class="text-right">
       <%= link_to "全ての商品を見る＞", items_path %>

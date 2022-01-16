@@ -30,7 +30,7 @@ patch '/customers/:id/withdrawal' => 'customers#withdrawal', as: 'withdrawal'
 #会員側配送先のルート
 resources :addresses
 
-#会員側商品一覧のルート
+#会員側商品一覧のルートCD
 resources :items, only: [:index, :show, :create]
 
 resources :cart_items, only: [:index, :update, :destroy] do

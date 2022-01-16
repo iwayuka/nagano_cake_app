@@ -1,4 +1,4 @@
-<!-- 注文履歴一覧画面 -->
+<!-- 注文履歴詳細画面 -->
 <div class="container">
   <div class="my-3 row">
     <div class="col-lg-4 d-flex justify-content-center" style="background-color: secondarys" >
@@ -68,7 +68,7 @@
           <td class="table-active">
             <p><strong>ご請求額</strong></p>
           </td>
-          <td><%= @order.total_payment.to_s(:delimited) %></td>
+          <td><%= @order_total_payment.total_payment.to_s(:delimited) %></td>
         </tr>
       </table>
     </div>

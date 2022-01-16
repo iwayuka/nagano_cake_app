@@ -11,7 +11,7 @@
       <h4><strong><%= @item.name %></strong></h4>
       <h5><strong><%= @item.introduction %></strong></h5>
       <div class="mt-5 d-flex flex-wrap align-items-end">
-        <h4>¥<%= @item.price.to_s(:delimited) %></h4><h6 class="ml-2">(税込)</h6>
+        <h4>¥<%= @item.with_tax_price.to_s(:delimited) %></h4><h6 class="ml-2">(税込)</h6>
       </div>
       <%= form_with model:@cart_item, url:'/items', local:true do |f| %>
         <% if customer_signed_in? %>

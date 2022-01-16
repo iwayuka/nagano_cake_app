@@ -33,14 +33,14 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-7">
+    <div class="col-lg-8">
       <table class="table">
         <tr class="table-light">
           <th scope="col" style="width: 30%">商品名</th>
-          <th scope="col" style="width: 15%">単価（税込）</th>
-          <th scope="col" style="width: 10%">数量</th>
+          <th scope="col" style="width: 15%">単価(税込)</th>
+          <th scope="col" style="width: 15%">数量</th>
           <th scope="col" style="width: 15%">小計</th>
-          <th scope="col" style="width: 30%">制作ステータス</th>
+          <th scope="col" style="width: 25%">製作ステータス</th>
         </tr>
         <% @order_details.each do |order_detail| %>
         <tr>
@@ -48,35 +48,36 @@
             <%= order_detail.item.name %>
           </td>
           <td>
-            <%= order_detail.price %>
+            <%= order_detail.price.to_s(:delimited) %>
           </td>
           <td>
             <%= order_detail.amount %>
           </td>
           <td>
             <!-- 小計の挿入 -->
+            <%= order_detail.subtotal.to_s(:delimited) %>
           </td>
           <td><!-- 後ほど注文詳細履歴で変更・更新 -->
-            <%= order_detail.making_status %>
+            <%= order_detail.making_status_i18n %>
           </td>
         </tr>
         <% end %>
       </table>
     </div>
 
-    <div class="col-lg-3">
+    <div class="col-lg-4 bd-highlight">
       <table class="table table-borderless">
         <tr>
-          <th>商品合計</th>
-          <td><!--小計の合計 --></td>
+          <th><h5><strong>商品合計</strong></h5></th>
+          <td><h5 class="text-right"><%= (@order.total_payment -= 800).to_s(:delimited) %>円</h5></td>
         </tr>
         <tr>
-          <th>送料</th>
-          <td><%= @order.shipping_cost %></td>
+          <th><h5><strong>送料</strong></h5></th>
+          <td><h5 class="text-right"><%= @order.shipping_cost %>円</h5></td>
         </tr>
         <tr>
-          <th>請求合計金額</th>
-          <td><!--「商品合計＋送料」を計算して出力 --></td>
+          <th><h5><strong>請求合計金額</strong></h5></th>
+          <td><h5 class="text-right"><strong><%= @order_total_payment.total_payment.to_s(:delimited) %>円</strong></h5></td>
         </tr>
       </table>
     </div>

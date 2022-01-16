@@ -38,10 +38,11 @@ class OrdersController < ApplicationController
     if @order.save
        cart_items.each do |cart|
         order_detail = OrderDetail.new
-        order_detail.item_id = cart.item_id
         order_detail.order_id = @order.id
-        order_detail.amount = cart.amount
+        order_detail.item_id = cart.item_id
         order_detail.price = cart.item.price
+        order_detail.amount = cart.amount
+        order_detail.making_status = OrderDetail.making_statuses.key(0)
         order_detail.save
       end
       # きちんと動作するか一旦カートへ遷移。のちに「ありがとう」画面へ遷移するように変更
@@ -58,6 +59,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @order_total_payment = Order.find(params[:id])
     @order_detail = OrderDetail.find_by(order_id: params[:id])
     @order_details = @order.order_details.page(params[:page])
   end
